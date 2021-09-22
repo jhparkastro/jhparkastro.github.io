@@ -78,17 +78,16 @@ analytics:
     tracking_id          :
 
 
+  #  bio              : "Observational Astronomer specializing in near-horizon observations of supermassive black holes. Member of the Event Horizon Telescope, PhD Candidate in Astrophysics at Radboud University.
 # Site Author
 author:
   name             : "Jongho Park"
   avatar           : "jpark.jpg"
-  bio              : "Observational Astronomer specializing in near-horizon observations of supermassive black holes. Member of the Event Horizon Telescope, PhD Candidate in Astrophysics at Radboud University.
+  bio              : "This is Jongho's homepage.
   <br /> <br />
   jpark@asiaa.sinica.edu.tw
   <br /> <br />
-  R1404 of AS/NTU Astronomy-Mathematics Building <br />
-  No.1, Sec.4, Roosevelt Rd <br />
-  Taipei, Taiwan
+  R1404 of AS/NTU Astronomy-Mathematics Building, No.1, Sec.4, Roosevelt Rd, Taipei, Taiwan
   "
   #  location         : "R1404 of AS/NTU Astronomy-Mathematics Building <br />No.1, Sec.4, Roosevelt Rd \nTaipei, Taiwan"
   employer         :
