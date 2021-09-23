@@ -102,3 +102,7 @@ Seoul National University, Seoul, Korea, [website](http://astro1.snu.ac.kr/eaagn
 8th East Asian VLBI Workshop, <br />
 Hokkaido University, Sapporo, Hokkaido, Japan, [website](https://www.miz.nao.ac.jp/vera/en/content/cc/cc20150706/c11.html)
 
+17. Aug 2014 - Contributed Talk: "Radio Variability and Random Walk Noise Properties of Four Blazars", <br />
+12th Asia-Pacific Regional IAU Meeting (APRIM), <br />
+DCC, Daejeon, Korea, website (terminated)
+
