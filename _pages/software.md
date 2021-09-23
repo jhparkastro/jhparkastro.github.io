@@ -5,12 +5,11 @@ permalink: /software/
 author_profile: true
 ---
 
-### `ehtim`
+### `GPCAL`
 
-I wrote `ehtim`  (`eht-imaging`) as a python framework for implementing regularized maximum likelihood imaging methods on EHT data. In the last two years, it has evolved into a flexible environment for manipulating, simulating, analyzing, and imaging interferometric data and is a workhorse of the EHT's data analysis pipeline.
+I wrote `GPCAL`, a novel instrumental polarization calibration pipeline for VLBI data. It overcomes several difficulties in existing calibration tools and improve calibration accuracy and dynamic ranges of linear polarimetric images. GPCAL has already been applied to the polarization analysis of the first M87 EHT results ([EHTC2021+](https://ui.adsabs.harvard.edu/abs/2021ApJ...910L..12E/abstract)). Furthermore, it has revealed a linear polarimetric structure in the subparsec core of the M87 jet at 43 GHz, which has not been possible with existing calibration tools due to the limited accuracy. The new linear polarization image of M87 is shown below. More details can be found [here](https://ui.adsabs.harvard.edu/abs/2021arXiv210713243P/abstract).
 
-`ehtim` has already been used in 10 peer reviewed publications and is currently being used and developed by at least one group outside the EHT collaboration. If you reconstruct images from visibilities and are interested in trying out some new methods beyond CLEAN, give `ehtim` a shot! The code is on [GitHub](https://github.com/achael/eht-imaging), and the documentation is [here](https://achael.github.io/eht-imaging/).
+{% include figure image_path="/files/M87pol.png" alt="Linear polarimetric image of the M87 jet at 43 GHz" %}{: .align-right}
 
-### `KORAL`
+The code is on [GitHub](https://github.com/jhparkastro/gpcal).
 
-I maintain the two-temperature, radiative GRMHD C code `KORAL` written by Aleksander Sadowski. In addition to adding new physics [like the spectral evolution of nonthermal electrons](https://arxiv.org/abs/1704.05092), I am also in the middle of refreshing the code, enhancing its performance and streamlining its structure to make future development easier. I hope to share a new, open-source version of `KORAL` on GitHub soon!
