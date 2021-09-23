@@ -1,19 +1,10 @@
 ---
-layout: single
-classes:
-    - wide
-    - landing
-    - dark-theme
-title: Software
+layout: archive
+title: "Software"
+permalink: /software/
 author_profile: true
-
-#header:
-#  overlay_image: /assets/images/banner.png
-#  image_description: "A simulation of Sgr A* as seen by the EHT at 230 GHz" 
-#  overlay_color: "#000"
-#  overlay_filter: "0.5"
-
 ---
+
 ### `ehtim`
 
 I wrote `ehtim`  (`eht-imaging`) as a python framework for implementing regularized maximum likelihood imaging methods on EHT data. In the last two years, it has evolved into a flexible environment for manipulating, simulating, analyzing, and imaging interferometric data and is a workhorse of the EHT's data analysis pipeline.
