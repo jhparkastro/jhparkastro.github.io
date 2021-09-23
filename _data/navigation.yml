@@ -4,10 +4,10 @@ main:
     url: /publications/
 
   - title: "Software"
-    url: _pages/software/
+    url: /software/
 
   - title: "Talks"
-    url: _pages/talks/    
+    url: /talks/    
 
   - title: "CV"
     url: /cv/
