@@ -178,6 +178,6 @@ Kim, J.; Trippe, S.; Sohn, B. W.; ...; **Park, J.**; et al. 2015, JKAS, 48, 285 
 [ADS](https://ui.adsabs.harvard.edu/abs/2015JKAS...48..285K/abstract) | [arXiv](https://arxiv.org/abs/1510.08150)
 
 31. Interferometric Monitoring of gamma-ray Bright Active Galactic Nuclei II: Frequency Phase Transfer <br />
-Algaba, J.-C.; Zhao, G.-Y.; Lee, S.-S.; ...; Park, J.; et al. 2015, JKAS, 48, 237 <br />
+Algaba, J.-C.; Zhao, G.-Y.; Lee, S.-S.; ...; **Park, J.**; et al. 2015, JKAS, 48, 237 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2015JKAS...48..237A/abstract) | [arXiv](https://arxiv.org/abs/1510.05817)
 
