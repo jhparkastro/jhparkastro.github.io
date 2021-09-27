@@ -41,19 +41,19 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 **Park, J.**; Trippe, S. 2017, ApJ, 834, 157 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2017ApJ...834..157P/abstract) | [arXiv](https://arxiv.org/abs/1611.04729)
 
-9. No asymmetric outflows from Sagittarius A* during the pericenter passage of the gas cloud G2 <br />
-**Park, J.**; Trippe, S.; Krichbaum, T. P.; et al. 2015, A&A, 576, L16 <br />
-[ADS](https://ui.adsabs.harvard.edu/abs/2015A%26A...576L..16P/abstract) | [arXiv](https://arxiv.org/abs/1503.08982)
-
 <ol reversed>
+
+<li> No asymmetric outflows from Sagittarius A* during the pericenter passage of the gas cloud G2 <br />
+**Park, J.**; Trippe, S.; Krichbaum, T. P.; et al. 2015, A&A, 576, L16 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2015A%26A...576L..16P/abstract) | [arXiv](https://arxiv.org/abs/1503.08982) </li>
 
 <li> Radio Variability and Random Walk Noise Properties of Four Blazars <br />
 **Park, J.**; Trippe, S. 2014, ApJ, 785, 76 <br />
-[ADS](https://ui.adsabs.harvard.edu/abs/2014ApJ...785...76P/abstract) | [arXiv](https://arxiv.org/abs/1402.6385) <li>
+[ADS](https://ui.adsabs.harvard.edu/abs/2014ApJ...785...76P/abstract) | [arXiv](https://arxiv.org/abs/1402.6385) </li>
 
 <li> Multiple Emission States in Active Galactic Nuclei <br />
 **Park, J.**; Trippe, S. 2012, JKAS, 45, 147 <br />
-[ADS](https://ui.adsabs.harvard.edu/abs/2012JKAS...45..147P/abstract) | [arXiv](https://arxiv.org/abs/1210.8248) <li>
+[ADS](https://ui.adsabs.harvard.edu/abs/2012JKAS...45..147P/abstract) | [arXiv](https://arxiv.org/abs/1210.8248) </li>
 
 </ol>
 
