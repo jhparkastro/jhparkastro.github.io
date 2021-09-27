@@ -18,7 +18,7 @@ I was born in Seoul, Republic of Korea. I received a B.S. in Astronomy from Seou
 
 I share some photos taken at the EHT M87 polarization press conference held at ASIAA in Taiwan, where I was the main speaker. As a scientist, it was an exciting moment surrounded by many media people. More news related to the conference can be found [here](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c224900c36836fdf6ef50d6963df9c46).
 
-![](http://jhparkastro.github.io/files/press1.jpg)
+![](http://jhparkastro.github.io/files/press1.resize.jpg)
 ![](http://jhparkastro.github.io/files/press2.resize.jpg)
 ![](http://jhparkastro.github.io/files/press3.jpg)
 
