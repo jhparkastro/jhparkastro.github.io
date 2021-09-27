@@ -45,15 +45,19 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 **Park, J.**; Trippe, S.; Krichbaum, T. P.; et al. 2015, A&A, 576, L16 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2015A%26A...576L..16P/abstract) | [arXiv](https://arxiv.org/abs/1503.08982)
 
-10. Radio Variability and Random Walk Noise Properties of Four Blazars <br />
+<ol reversed>
+
+<li> Radio Variability and Random Walk Noise Properties of Four Blazars <br />
 **Park, J.**; Trippe, S. 2014, ApJ, 785, 76 <br />
-[ADS](https://ui.adsabs.harvard.edu/abs/2014ApJ...785...76P/abstract) | [arXiv](https://arxiv.org/abs/1402.6385)
+[ADS](https://ui.adsabs.harvard.edu/abs/2014ApJ...785...76P/abstract) | [arXiv](https://arxiv.org/abs/1402.6385) <li>
 
-11. Multiple Emission States in Active Galactic Nuclei <br />
+<li> Multiple Emission States in Active Galactic Nuclei <br />
 **Park, J.**; Trippe, S. 2012, JKAS, 45, 147 <br />
-[ADS](https://ui.adsabs.harvard.edu/abs/2012JKAS...45..147P/abstract) | [arXiv](https://arxiv.org/abs/1210.8248)
+[ADS](https://ui.adsabs.harvard.edu/abs/2012JKAS...45..147P/abstract) | [arXiv](https://arxiv.org/abs/1210.8248) <li>
 
-{: reversed="reversed"}
+</ol>
+
+#{: reversed="reversed"}
 
 
 **Co-Author Papers**
