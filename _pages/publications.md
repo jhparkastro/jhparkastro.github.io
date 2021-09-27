@@ -53,6 +53,7 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 **Park, J.**; Trippe, S. 2012, JKAS, 45, 147 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2012JKAS...45..147P/abstract) | [arXiv](https://arxiv.org/abs/1210.8248)
 
+{: reversed="reversed"}
 
 
 **Co-Author Papers**
