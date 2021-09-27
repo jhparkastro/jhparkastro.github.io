@@ -42,8 +42,7 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 [ADS](https://ui.adsabs.harvard.edu/abs/2017ApJ...834..157P/abstract) | [arXiv](https://arxiv.org/abs/1611.04729)
 
 <ol reversed>
-
-<li> No asymmetric outflows from Sagittarius A* during the pericenter passage of the gas cloud G2 <br />
+	<li> No asymmetric outflows from Sagittarius A* during the pericenter passage of the gas cloud G2 <br />
 **Park, J.**; Trippe, S.; Krichbaum, T. P.; et al. 2015, A&A, 576, L16 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2015A%26A...576L..16P/abstract) | [arXiv](https://arxiv.org/abs/1503.08982) </li>
 
