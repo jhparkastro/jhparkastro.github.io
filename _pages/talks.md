@@ -5,6 +5,12 @@ permalink: /talks/
 author_profile: true
 ---
 
+**Press conferences**
+
+1\. Mar 2021 - Press Conference Presentation: "First M87 Event Horizon Telescope Results: Polarization of the Ring & Magnetic Field Structure near the Event Horizon", <br />
+Academia Sinica Institute of Astronomy and Astrophysics, <br />
+Taipei, Taiwan, [website](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c224900c36836fdf6ef50d6963df9c46)
+
 **Invited talks**
 
 7\. May 2021 - Invited Colloquium: "Magnetic field structure near the event horizon of the M87 black hole.", <br />
