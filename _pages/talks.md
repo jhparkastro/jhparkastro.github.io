@@ -13,6 +13,14 @@ Taipei, Taiwan, [website](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c22
 
 **Invited talks**
 
+9\. Aug 2022 - Invited Talk: "Collimation and Acceleration of AGN jets", <br />
+Focus Meeting 1 "Physics of Relativistic Jets on All Scales" at the IAUGA 2022, <br />
+BEXCO, Busan, Republic of Korea, [website](http://ga2022-fm1.kasi.re.kr/?page_id=26)
+
+8\. Jan 2022 - Invited Talk: "Polarization of the photon ring of M87*" (cancelled), <br />
+The 239th meeting of the Americal Astronomical Society (in the special session "New Views of Extragalactic Supermassive Black Holes with the Event Horizon Telescope"), <br />
+Salt Lake City, Utah, USA, [website](https://submissions.mirasmart.com/AAS239/itinerary/EventsAAG.aspx?rd=4)
+
 7\. May 2021 - Invited Colloquium: "Magnetic field structure near the event horizon of the M87 black hole.", <br />
 Seoul National University, <br />
 Seoul, South Korea, [website](http://astro2.snu.ac.kr/bbs/board.php?tbl=colloquium170&mode=VIEW&num=10&category=&findType=&findWord=&sort1=&sort2=&language=&page=1)
@@ -43,6 +51,10 @@ National Astronomical Observatory of Japan (NAOJ), Mitaka, Tokyo, Japan, website
 
 
 **Contributed Talks**
+
+18\. Sep 2022 - Contributed Talk: "Collimation and Acceleration of AGN jets", <br />
+2nd Malaysia VLBI Workshop, <br />
+Universiti Malaya, Kuala Lumpur, Malaysia, [website](https://sites.google.com/view/2myvlbiworkshop/program?authuser=0)
 
 17\. Mar 2021 - Contributed Talk: "GPCAL: a new calibration pipeline for instrumental polarization in VLBI data", <br />
 13th East Asian VLBI Workshop 2021, <br />

@@ -10,8 +10,8 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 **First Author Papers**
 
 11\. A revised view of the linear polarization in the subparsec core of M87 at 7 mm <br />
-**Park, J.**; Asada, K.; Nakamura, M.; et al. 2021, ApJ, accepted <br />
-[arXiv](https://arxiv.org/abs/2107.13243)
+**Park, J.**; Asada, K.; Nakamura, M.; et al. 2021, ApJ, 922, 180 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2021ApJ...922..180P/abstract)
 
 10\. Jet collimation and acceleration in the giant radio galaxy NGC 315 <br />
 **Park, J.**; Hada, K.; Nakamura, M.; et al. 2021, ApJ, 909, 76 <br />
@@ -57,9 +57,65 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 
 **Co-Author Papers**
 
+45\. Resolving the Inner Parsec of the Blazar J1924-2914 with the Event Horizon Telescope <br />
+Issaoun, Sara; Wielgus, Maciek; Jorstad, Svetlana; ...; **Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...934..145I/abstract) | [arXiv](https://arxiv.org/abs/2208.01662)
+
+44\. Unraveling the Innermost Jet Structure of OJ 287 with the First GMVA + ALMA Observations <br />
+Zhao, Guang-Yao; Gómez, José L.; Fuentes, Antonio; ...; **Park, J.**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...932...72Z/abstract) | [arXiv](https://arxiv.org/abs/2208.01662)
+
+43\. Characterizing and Mitigating Intraday Variability: Reconstructing Source Structure in Accreting Black Holes with mm-VLBI <br />
+Broderick, Avery E.; Gold, Roman; Georgiev, Boris; ...; **Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..21B/abstract)
+
+42\. A Universal Power-law Prescription for Variability from Synthetic Images of Black Hole Accretion Flows <br />
+Georgiev, Boris; Pesce, Dominic W.; Broderick, Avery E.; ...; **Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..20G/abstract)
+
+41\. Millimeter Light Curves of Sagittarius A* Observed during the 2017 Event Horizon Telescope Campaign <br />
+Wielgus, Maciek; Marchili, Nicola; Martí-Vidal, Iván; ...; **Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..19W/abstract) | [arXiv](https://arxiv.org/abs/2208.01662)
+
+40\. Selective Dynamical Imaging of Interferometric Data <br />
+Farah, Joseph; Galison, Peter; Akiyama, Kazunori; ...; **Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..18F/abstract)
+
+39\. First Sagittarius A* Event Horizon Telescope Results. VI. Testing the Black Hole Metric <br />
+**Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..17E/abstract)
+
+38\. First Sagittarius A* Event Horizon Telescope Results. V. Testing Astrophysical Models of the Galactic Center Black Hole <br />
+**Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..16E/abstract)
+
+37\. First Sagittarius A* Event Horizon Telescope Results. IV. Variability, Morphology, and Black Hole Mass <br />
+**Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..15E/abstract)
+
+36\. First Sagittarius A* Event Horizon Telescope Results. III. Imaging of the Galactic Center Supermassive Black Hole <br />
+**Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..14E/abstract)
+
+35\. First Sagittarius A* Event Horizon Telescope Results. II. EHT and Multiwavelength Observations, Data Processing, and Calibration <br />
+**Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..13E/abstract)
+
+34\. First Sagittarius A* Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way <br />
+**Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..12E/abstract)
+
+33\. The Intrinsic Structure of Sagittarius A* at 1.3 cm and 7 mm <br />
+Cho, Ilje; Zhao, Guang-Yao; Kawashima, Tomohisai; ...; **Park, J.**; et al. 2022, ApJ, 926, 108 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2021RAA....21..205C/abstract) | [arXiv](https://arxiv.org/abs/2208.01662)
+
+32\. East Asian VLBI Network observations of active galactic nuclei jets: imaging with KaVA+Tianma+Nanshan <br />
+Cui, Yu-Zhu; Hada, Kazuhiro; Kino, Motoki; ...; **Park, J.**; et al. 2021, RAA, 21, 205 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2021RAA....21..205C/abstract) | [arXiv](https://arxiv.org/abs/2208.01662)
+
 31\. Event Horizon Telescope observations of the jet launching and collimation in Centaurus A <br />
-Janssen, Michael; Falcke, Heino; Kadler, Matthias; **Event Horizon Telescope Collaboration**; et al. 2021, Nature Astronomy, in press <br />
-[ADS](https://ui.adsabs.harvard.edu/abs/2021NatAs.tmp..139J/abstract)
+Janssen, Michael; Falcke, Heino; Kadler, Matthias; ...; **Event Horizon Telescope Collaboration**; et al. 2021, Nature Astronomy, 5, 1017 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2021NatAs.tmp..139J/abstract) | [arXiv](https://arxiv.org/abs/2208.01662)
 
 30\. A Detailed Kinematic Study of 3C 84 and Its Connection to Gamma-Rays <br />
 Hodgson, Jeffrey A.; Rani, Bindu; Oh, Junghwan; ...; **Park, J.**; et al. 2021, ApJ, 914, 43 <br />
