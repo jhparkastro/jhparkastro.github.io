@@ -9,6 +9,10 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 
 **First Author Papers**
 
+12\. Polarization Observations of AGN Jets: Past and Future <br />
+**Park, J.**; Algaba, J. C. 2022, Galaxies, 10(5), 102 <br />
+[ADS](https://www.mdpi.com/2075-4434/10/5/102) | [arXiv](https://arxiv.org/abs/2210.13819)
+
 11\. A revised view of the linear polarization in the subparsec core of M87 at 7 mm <br />
 **Park, J.**; Asada, K.; Nakamura, M.; et al. 2021, ApJ, 922, 180 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2021ApJ...922..180P/abstract) | [arXiv](https://arxiv.org/abs/2107.13243)
