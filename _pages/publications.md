@@ -61,6 +61,26 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 
 **Co-Author Papers**
 
+50\. The Event Horizon Telescope Image of the Quasar NRAO 530 <br />
+Jorstad, Svetlana; Wielgus, Maciek; Lico, Rocco; **Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2023ApJ...943..170J/abstract) | [arXiv](https://arxiv.org/abs/2302.04622)
+
+49\. Using the Crab Nebula as Polarization Angle Calibrator for the Korean VLBI Network <br />
+Kam, Minchul; Trippe, Sascha; Byun, Do-Young; **Park, J.**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2023JKAS...56....1K/abstract) | [arXiv](https://arxiv.org/abs/2212.08274)
+
+48\. Overview of the Observing System and Initial Scientific Accomplishments of the East Asian VLBI Network (EAVN) <br />
+Akiyama, Kazunori; Algaba, Juan-Carlos; An, Tao; ...; **Park, J.**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022Galax..10..113A/abstract) | [arXiv](https://arxiv.org/abs/2212.07040)
+
+47\. Implications from the Velocity Profile of the M87 Jet: A Possibility of a Slowly Rotating Black Hole Magnetosphere <br />
+Kino, Motoki; Takahashi, Masaaki; Kawashima, Tomohisa; **Park, J.**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...939...83K/abstract) | [arXiv](https://arxiv.org/abs/2209.07264)
+
+46\. The Photon Ring in M87* <br />
+Broderick, Avery E.; Pesce, Dominic W.; Gold, Roman; ...; **Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...935...61B/abstract) | [arXiv](https://arxiv.org/abs/2208.09004)
+
 45\. Resolving the Inner Parsec of the Blazar J1924-2914 with the Event Horizon Telescope <br />
 Issaoun, Sara; Wielgus, Maciek; Jorstad, Svetlana; ...; **Event Horizon Telescope Collaboration**; et al. <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...934..145I/abstract) | [arXiv](https://arxiv.org/abs/2208.01662)
