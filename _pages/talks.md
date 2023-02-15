@@ -13,6 +13,10 @@ Taipei, Taiwan, [website](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c22
 
 **Invited talks**
 
+10\. Feb 2023 - Invited Talk: "The Magnetic Field Structure in the Jet Acceleration and Collimation Zone of M87", <br />
+Black Hole Astrophysics with VLBI 2023
+NAOJ, Mitaka, Tokyo, Japan, [website](https://sites.google.com/view/blackholeastrophysicswithvlbi2/program?authuser=0)
+
 9\. Aug 2022 - Invited Talk: "Collimation and Acceleration of AGN jets", <br />
 Focus Meeting 1 "Physics of Relativistic Jets on All Scales" at the IAUGA 2022, <br />
 BEXCO, Busan, Republic of Korea, [website](http://ga2022-fm1.kasi.re.kr/?page_id=26)
