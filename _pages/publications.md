@@ -61,6 +61,30 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 
 **Co-Author Papers**
 
+56\. Double SSA spectrum and magnetic field strength of the FSRQ 3C 454.3 <br />
+Jeong, Hyeon-Woo; Lee, Sang-Sung; Cheong, Whee Yeon; ...; **Park, J.**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.5703J/abstract) | [arXiv](https://arxiv.org/abs/2306.04888)
+
+55\. Probing the Heart of Active Narrow-line Seyfert 1 Galaxies with VERA Wideband Polarimetry <br />
+Takamura, Mieko; Hada, Kazuhiro; Honma, Mareki; ...; **Park, J.**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2023ApJ...952...47T/abstract) | [arXiv](https://arxiv.org/abs/2306.03139)
+
+54\. Comparison of Polarized Radiative Transfer Codes Used by the EHT Collaboration <br />
+Prather, Ben S.; Dexter, Jason; Moscibrodzka, Monika; **Event Horizon Telescope Collaboration**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2023ApJ...950...35P/abstract) | [arXiv](https://arxiv.org/abs/2303.12004)
+
+53\. Surveying Flux Density in Galaxies with Apparent Large Black Holes at Millimeter/Submillimeter Wavelengths <br />
+Lo, Wen-Ping; Asada, Keiichi; Matsushita, Satoki; **Park, J.**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2023ApJ...950...10L/abstract)
+
+52\. Spectral analysis of a parsec-scale jet in M 87: Observational constraint on the magnetic field strengths in the jet <br />
+Ro, Hyunwook; Kino, Motoki; Sohn, Bong Won; ...; **Park, J.**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2023A%26A...673A.159R/abstract) | [arXiv](https://arxiv.org/abs/2303.01014)
+
+51\. A ring-like accretion structure in M87 connecting its black hole and jet <br />
+Lu, Ru-Sen; Asada, Keiichi; Krichbaum, Thomas P.; **Park, J.**; et al. <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2023Natur.616..686L/abstract) | [arXiv](https://arxiv.org/abs/2304.13252)
+
 50\. The Event Horizon Telescope Image of the Quasar NRAO 530 <br />
 Jorstad, Svetlana; Wielgus, Maciek; Lico, Rocco; **Event Horizon Telescope Collaboration**; et al. <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2023ApJ...943..170J/abstract) | [arXiv](https://arxiv.org/abs/2302.04622)

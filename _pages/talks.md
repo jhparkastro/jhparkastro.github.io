@@ -13,6 +13,18 @@ Taipei, Taiwan, [website](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c22
 
 **Invited talks**
 
+13\. Jun 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
+Kyung Hee University
+Yongin, Republic of Korea, [website](https://space.khu.ac.kr/space/user/bbs/BMSR00040/view.do)
+
+12\. May 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
+Korea Astronomy & Space Science Institute (KASI)
+Daejeon, Republic of Korea, [website](https://www.kasi.re.kr/kor/post/eng_colloquium/29408)
+
+11\. Apr 2023 - Invited Talk: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
+2023 107th KAS Spring Meeting
+Lahan Hotel JeonJu,  JeonJu, Republic of Korea, [website](http://www.kas.org/html/sub4_01_view.html?gubun=1&idx=74)
+
 10\. Feb 2023 - Invited Talk: "The Magnetic Field Structure in the Jet Acceleration and Collimation Zone of M87", <br />
 Black Hole Astrophysics with VLBI 2023
 NAOJ, Mitaka, Tokyo, Japan, [website](https://sites.google.com/view/blackholeastrophysicswithvlbi2/program?authuser=0)
@@ -55,6 +67,14 @@ National Astronomical Observatory of Japan (NAOJ), Mitaka, Tokyo, Japan, website
 
 
 **Contributed Talks**
+
+20\. Jun 2023 - Contributed Talk: "Searching for New Targets for the EHT & Faraday Synthesis of the M87 Jet", <br />
+the extended KVN KSP workshop, <br />
+Korea Astronomy and Space Science Institute (KASI), Daejeon, Republic of Korea, [website](https://docs.google.com/document/d/1qD_oTI-0UQ8xIKjV1dX5Pz9nhq-8cRP0fI_bDsDT4wo/edit)
+
+19\. Oct 2022 - Contributed Talk: "Collimation and Acceleration of AGN jets", <br />
+2022 106th KAS Fall Meeting, <br />
+Lahan Select Kyung,  Gyeongju, Republic of Korea, [website](http://www.kas.org/html/sub4_01_view.html?gubun=1&idx=74)
 
 18\. Sep 2022 - Contributed Talk: "Collimation and Acceleration of AGN jets", <br />
 2nd Malaysia VLBI Workshop, <br />
