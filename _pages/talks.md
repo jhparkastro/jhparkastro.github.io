@@ -13,6 +13,14 @@ Taipei, Taiwan, [website](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c22
 
 **Invited talks**
 
+15\. Nov 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
+Yonsei University
+Seoul, Republic of Korea, [website](https://astro.yonsei.ac.kr/galaxy/galaxy01/seminar.do?mode=view&articleNo=177137&article.offset=0&articleLimit=10)
+
+14\. Aug 2023 - Invited Lecture: "Active Galactic Nuclei \& Supermassive Black Holes", <br />
+2023 Radio Summer School
+Seoul National University, Siheung, Republic of Korea, [website](https://radio.kasi.re.kr/event/event.php?id=radiousers2023)
+
 13\. Jun 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
 Kyung Hee University
 Yongin, Republic of Korea, [website](https://space.khu.ac.kr/space/user/bbs/BMSR00040/view.do)
@@ -67,6 +75,14 @@ National Astronomical Observatory of Japan (NAOJ), Mitaka, Tokyo, Japan, website
 
 
 **Contributed Talks**
+
+22\. Nov 2023 - Contributed Talk: "Observational Evidence for a Dense Ambient Medium Shaping the Jet in 3C 84", <br />
+14th East Asian VLBI Workshop, <br />
+Shanghai, China, [website](https://eavw2023.casconf.cn/page/1666240927259299841)
+
+21\. Oct 2023 - Contributed Talk: "Observational Evidence for a Dense Ambient Medium Shaping the Jet in 3C 84", <br />
+2023 108th KAS Fall Meeting, <br />
+Ramada Plaza Jeju, Jeju, Republic of Korea, [website](https://www.dropbox.com/scl/fi/fkcstqq96xx1kz78d96hw/23KASFallMeeting_0925.pdf?rlkey=8kizoqmio0cchmr4ekbjb1h3m&dl=0)
 
 20\. Jun 2023 - Contributed Talk: "Searching for New Targets for the EHT & Faraday Synthesis of the M87 Jet", <br />
 the extended KVN KSP workshop, <br />
