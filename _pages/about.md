@@ -22,9 +22,11 @@ My current research endeavors revolve around three main areas of interest:
 
 I was born in Seoul, Republic of Korea, and completed my undergraduate education at Seoul National University (SNU), where I received a B.S. in Astronomy in 2013. My academic journey continued at SNU, leading to the successful completion of my Ph.D. in Astronomy in 2019 under the supervision of Prof. [Sascha Trippe](http://astro.snu.ac.kr/~trippe/). Subsequently, I pursued a career in research, commencing as a postdoctoral fellow at [ASIAA](http://www.asiaa.sinica.edu.tw/) in 2019, followed by a position as an EACOA fellow from 2020 to 2022. During this period, I was actively involved in the Greenland Telescope ([GLT](http://www.asiaa.sinica.edu.tw/project/vlbi.php)) project, collaborating closely with Dr. [Keiichi Asada](http://www.asiaa.sinica.edu.tw/people/cv.php?i=asada) and Dr. [Masanori Nakamura](https://www.asiaa.sinica.edu.tw/people/cv.php?i=nakamura). In 2022, I achieved tenure as a scientist at KASI and have been a member of the KHU faculty since 2023. Currently, my primary research focus revolves around the study of AGN jets and supermassive black holes, with a specific emphasis on utilizing global millimeter VLBI arrays such as the EHT and [GMVA](https://www3.mpifr-bonn.mpg.de/div/vlbi/globalmm/).
 
-I am delighted to share some photos from the EHT M87 polarization press conference that took place at ASIAA in Taiwan, where I had the privilege of being the main speaker. As a scientist, it was an exhilarating experience being in the spotlight alongside numerous members of the media. For additional news and information about the conference, please visit this [link](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c224900c36836fdf6ef50d6963df9c46).
+I am delighted to share a photo from the public outreach talk held at Gwacheon Science Museum, where I presented how to interpret the results of the supermassive black hole imaging with the EHT. There were about 250 people attending the talk, many of whom are elementary and junior high school students, who will be the next-generation scientists in Korea.
 
-![](http://jhparkastro.github.io/files/press1.resize.jpg)
-![](http://jhparkastro.github.io/files/press2.resize.jpg)
-![](http://jhparkastro.github.io/files/press3.jpg)
+# I am delighted to share some photos from the EHT M87 polarization press conference that took place at ASIAA in Taiwan, where I had the privilege of being the main speaker. As a scientist, it was an exhilarating experience being in the spotlight alongside numerous members of the media. For additional news and information about the conference, please visit this [link](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c224900c36836fdf6ef50d6963df9c46).
+
+![](http://jhparkastro.github.io/files/gwacheon.jpg)
+# ![](http://jhparkastro.github.io/files/press2.resize.jpg)
+# ![](http://jhparkastro.github.io/files/press3.jpg)
 

@@ -11,6 +11,12 @@ author_profile: true
 Academia Sinica Institute of Astronomy and Astrophysics, <br />
 Taipei, Taiwan, [website](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c224900c36836fdf6ef50d6963df9c46)
 
+**Public outreach talks**
+
+1\. Apr 2024 - Public Outreach Presentation: "Seeing the Black Hole: EHT Black Hole Observation", <br />
+National Gwacheon Science Museum, <br />
+Gwacheon, Republic of Korea, [website](https://www.sciencecenter.go.kr/scipia/introduce/notice/24475)
+
 **Invited talks**
 
 15\. Nov 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
@@ -75,6 +81,14 @@ National Astronomical Observatory of Japan (NAOJ), Mitaka, Tokyo, Japan, website
 
 
 **Contributed Talks**
+
+24\. Feb 2024 - Contributed Talk: "Advancements in AGN Jet Research: Insights from the Global VLBI Alliance", <br />
+40 Years Evolution of Radio Interferometry in Japan, <br />
+Tokyo, Japan, [website](https://sites.google.com/view/40y-radio-interferometry-japan/home)
+
+23\. Feb 2024 - Contributed Talk: "Observational Evidence to Support a Dense Ambient Medium Shaping the Jet in 3C 84", <br />
+Black Hole Astrophysics with VLBI 2024, <br />
+Tokyo, Japan, [website](https://sites.google.com/view/black-hole-astrophysics-with-v/program?authuser=0)
 
 22\. Nov 2023 - Contributed Talk: "Observational Evidence for a Dense Ambient Medium Shaping the Jet in 3C 84", <br />
 14th East Asian VLBI Workshop, <br />
