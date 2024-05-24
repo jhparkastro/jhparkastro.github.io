@@ -24,9 +24,5 @@ I was born in Seoul, Republic of Korea, and completed my undergraduate education
 
 I am delighted to share a photo from the public outreach talk held at Gwacheon Science Museum, where I presented how to interpret the results of the supermassive black hole imaging with the EHT. There were about 250 people attending the talk, many of whom are elementary and junior high school students, who will be the next-generation scientists in Korea.
 
-# I am delighted to share some photos from the EHT M87 polarization press conference that took place at ASIAA in Taiwan, where I had the privilege of being the main speaker. As a scientist, it was an exhilarating experience being in the spotlight alongside numerous members of the media. For additional news and information about the conference, please visit this [link](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c224900c36836fdf6ef50d6963df9c46).
-
-![](http://jhparkastro.github.io/files/gwacheon.jpg)
-# ![](http://jhparkastro.github.io/files/press2.resize.jpg)
-# ![](http://jhparkastro.github.io/files/press3.jpg)
+![](http://jhparkastro.github.io/files/Gwacheon.jpg)
 
