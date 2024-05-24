@@ -5,12 +5,7 @@ permalink: /group/
 author_profile: true
 ---
 
-**Professor**
-
-![](http://jhparkastro.github.io/files/jpark.jpg)
-
-Jongho Park
-
-:-------------------------:|:-------------------------:
-![](http://jhparkastro.github.io/files/jpark.jpg)  | Professor
+**Professor**|
+:---:|:---
+![](http://jhparkastro.github.io/files/jpark.jpg)  | Professor <br /> Jongho Park
 Jongho Park | Ph. D.
