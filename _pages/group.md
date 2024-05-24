@@ -6,6 +6,6 @@ author_profile: true
 ---
 
 **Professor**|
-:---:|:---
-![](http://jhparkastro.github.io/files/jpark.jpg)  | Professor <br /> Jongho Park
-Jongho Park | Ph. D.
+![](http://jhparkastro.github.io/files/jpark_resize.jpg) <br /> 
+Jongho Park <br />
+Ph. D. 2019, Seoul National University
