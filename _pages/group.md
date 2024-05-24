@@ -10,3 +10,7 @@ author_profile: true
 ![](http://jhparkastro.github.io/files/jpark.jpg)
 
 Jongho Park
+
+:-------------------------:|:-------------------------:
+![](http://jhparkastro.github.io/files/jpark.jpg)  | Professor
+Jongho Park | Ph. D.
