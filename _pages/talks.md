@@ -19,6 +19,10 @@ Gwacheon, Republic of Korea, [website](https://www.sciencecenter.go.kr/scipia/in
 
 **Invited talks**
 
+16\. Jun 2024 - Invited Colloquium: "Introduction to GPCAL: A Novel Pipeline for Instrumental Polarization Calibration and Methods for Calibrating Frequency- and Time-dependent Polarization Leakages", <br />
+Max-Planck Institute for Radio Astronomy
+Online, [website](https://colloquia.mpifr-bonn.mpg.de/index.php?time=30)
+
 15\. Nov 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
 Yonsei University
 Seoul, Republic of Korea, [website](https://astro.yonsei.ac.kr/galaxy/galaxy01/seminar.do?mode=view&articleNo=177137&article.offset=0&articleLimit=10)
