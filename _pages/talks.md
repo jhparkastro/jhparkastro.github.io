@@ -19,29 +19,33 @@ Gwacheon, Republic of Korea, [website](https://www.sciencecenter.go.kr/scipia/in
 
 **Invited talks**
 
-16\. Jun 2024 - Invited Colloquium: "Introduction to GPCAL: A Novel Pipeline for Instrumental Polarization Calibration and Methods for Calibrating Frequency- and Time-dependent Polarization Leakages", <br />
+17\. Jun 2024 - Invited Colloquium: "Introduction to GPCAL: A Novel Pipeline for Instrumental Polarization Calibration and Methods for Calibrating Frequency- and Time-dependent Polarization Leakages", <br />
 Max-Planck Institute for Radio Astronomy
 Online, [website](https://colloquia.mpifr-bonn.mpg.de/index.php?time=30)
 
-15\. Nov 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
+16\. Nov 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
 Yonsei University
 Seoul, Republic of Korea, [website](https://astro.yonsei.ac.kr/galaxy/galaxy01/seminar.do?mode=view&articleNo=177137&article.offset=0&articleLimit=10)
 
-14\. Aug 2023 - Invited Lecture: "Active Galactic Nuclei \& Supermassive Black Holes", <br />
+15\. Aug 2023 - Invited Lecture: "Active Galactic Nuclei \& Supermassive Black Holes", <br />
 2023 Radio Summer School
 Seoul National University, Siheung, Republic of Korea, [website](https://radio.kasi.re.kr/event/event.php?id=radiousers2023)
 
-13\. Jun 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
+14\. Jun 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
 Kyung Hee University
 Yongin, Republic of Korea, [website](https://space.khu.ac.kr/space/user/bbs/BMSR00040/view.do)
 
-12\. May 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
+13\. May 2023 - Invited Colloquium: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
 Korea Astronomy & Space Science Institute (KASI)
 Daejeon, Republic of Korea, [website](https://www.kasi.re.kr/kor/post/eng_colloquium/29408)
 
-11\. Apr 2023 - Invited Talk: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
+12\. Apr 2023 - Invited Talk: "Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA", <br />
 2023 107th KAS Spring Meeting
 Lahan Hotel JeonJu,  JeonJu, Republic of Korea, [website](http://www.kas.org/html/sub4_01_view.html?gubun=1&idx=74)
+
+11\. Mar 2023 - Invited Talk: "The Supermassive Black Hole at the Center of M87 as Seen by the EHT", <br />
+American Astronomical Society (AAS), High Energy Astrophysics Division (HEAD) 20 Meeting
+Hilton Waikoloa Village, Waikoloa, Hawai'i, United States of America, [website](https://docs.google.com/spreadsheets/d/1Z7FH6406UpfDbblreTNJvQGXF_aYGPDWE41hBxnxtks/edit?gid=493142002#gid=493142002)
 
 10\. Feb 2023 - Invited Talk: "The Magnetic Field Structure in the Jet Acceleration and Collimation Zone of M87", <br />
 Black Hole Astrophysics with VLBI 2023
