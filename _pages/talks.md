@@ -19,6 +19,10 @@ Gwacheon, Republic of Korea, [website](https://www.sciencecenter.go.kr/scipia/in
 
 **Invited talks**
 
+18\. Aug 2024 - Invited Lecture: "Supermassive Black Holes \& Active Galactic Nuclei", <br />
+2024 Radio Summer School
+Korea Astronomy & Space Science Institute (KASI), Daejeon, Republic of Korea, [website](https://radio.kasi.re.kr/event/event.php?id=radio24)
+
 17\. Jun 2024 - Invited Colloquium: "Introduction to GPCAL: A Novel Pipeline for Instrumental Polarization Calibration and Methods for Calibrating Frequency- and Time-dependent Polarization Leakages", <br />
 Max-Planck Institute for Radio Astronomy
 Online, [website](https://colloquia.mpifr-bonn.mpg.de/index.php?time=30)

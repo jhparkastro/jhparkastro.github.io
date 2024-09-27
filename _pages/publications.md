@@ -10,7 +10,7 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 **First Author Papers**
 
 16\. Discovery of Limb-Brightening in the Parsec-Scale Jet of NGC 315 through Global VLBI Observations and Its Implications for Jet Models <br />
-**Park, J.**; Zhao, Guang-Yao; Nakamura, Masanori; et al. 2024, ApJL, accepted <br />
+**Park, J.**; Zhao, Guang-Yao; Nakamura, Masanori; et al. 2024, ApJL, 973, L45 <br />
 [ADS]() | [arXiv](https://arxiv.org/abs/2408.09069)
 
 15\. Observational Evidence for a Dense Ambient Medium Shaping the Jet in 3C 84 <br />
@@ -83,25 +83,29 @@ Yi, Kunwoo; **Park, Jongho**; Nakamura, Masanori; et al. 2024, A&A, in press <br
 
 **Co-Author Papers**
 
-66\. First Sagittarius A* Event Horizon Telescope Results. VIII. Physical Interpretation of the Polarized Ring <br />
+67\. First Very Long Baseline Interferometry Detections at 870 μm <br />
+Raymond, Alexander W.; Doeleman, Sheperd S.; Asada, Keiichi; **Event Horizon Telescope Collaboration**; et al. 2024, AJ, 168, 130 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2024AJ....168..130R/abstract)
+
+66\. Evolution of the Termination Region of the Parsec-Scale Jet of 3C 84 Over the Past 20 Years <br />
+Kam, Minchul; Hodgson, Jeffrey A.; **Park, Jongho**; et al. 2024, ApJ, 970, 176 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2024ApJ...970..176K/abstract) | [arXiv](https://arxiv.org/abs/2312.13666)
+
+65\. First Sagittarius A* Event Horizon Telescope Results. VIII. Physical Interpretation of the Polarized Ring <br />
 **Event Horizon Telescope Collaboration**; Akiyama, Kazunori; Alberdi, Antxon; et al. 2024, ApJ Letters, 964, 26 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2024ApJ...964L..26E/abstract)
 
-65\. First Sagittarius A* Event Horizon Telescope Results. VII. Polarization of the Ring <br />
+64\. First Sagittarius A* Event Horizon Telescope Results. VII. Polarization of the Ring <br />
 **Event Horizon Telescope Collaboration**; Akiyama, Kazunori; Alberdi, Antxon; et al. 2024, ApJ Letters, 964, 25 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2024ApJ...964L..25E/abstract)
 
-64\. Ordered magnetic fields around the 3C 84 central black hole <br />
+63\. Ordered magnetic fields around the 3C 84 central black hole <br />
 Paraschos, G. F.; Kim, J. -Y.; Wielgus, M.; **Event Horizon Telescope Collaboration**; et al. 2024, A&A, 682, 3 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2024A%26A...682L...3P/abstract) | [arXiv](https://arxiv.org/abs/2402.00927)
 
-63\. The persistent shadow of the supermassive black hole of M 87. I. Observations, calibration, imaging, and analysis <br />
+62\. The persistent shadow of the supermassive black hole of M 87. I. Observations, calibration, imaging, and analysis <br />
 **Event Horizon Telescope Collaboration**; Akiyama, Kazunori; Alberdi, Antxon; et al. 2024, A&A, 681, 79 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..79E/abstract)
-
-62\. Evolution of the Termination Region of the Parsec-Scale Jet of 3C 84 Over the Past 20 Years <br />
-Kam, Minchul; Hodgson, Jeffrey A.; **Park, Jongho**; et al. 2024, ApJ, in press <br />
-[ADS](https://ui.adsabs.harvard.edu/public-libraries/Ifwhke1sSZStMcVAe8B9gg) | [arXiv](https://arxiv.org/abs/2312.13666)
 
 61\. A search for pulsars around Sgr A* in the first Event Horizon Telescope dataset <br />
 Torne, Pablo; Liu, Kuo; Eatough, Ralph P.; **Event Horizon Telescope Collaboration**; et al. 2023, ApJ, in press <br />
