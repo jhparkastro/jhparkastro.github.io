@@ -19,6 +19,14 @@ Gwacheon, Republic of Korea, [website](https://www.sciencecenter.go.kr/scipia/in
 
 **Invited talks**
 
+20\. Oct 2024 - Invited Talk: "Discovery of Limb-Brightening in the Parsec-Scale Jet of NGC 315 through Global VLBI Observations and Its Implications for Jet Models", <br />
+15th East Asian VLBI Workshop
+The Grand Beach Resort,  Port Dickson, Malaysia, [website](https://sites.google.com/um.edu.my/eavw2024/schedule?authuser=0)
+
+19\. Oct 2024 - Invited Talk: "Advancing Supermassive Black Hole Research with the Event Horizon Telescope", <br />
+2024 110th KAS Fall Meeting
+Skybay Hotel Gyeongpo, Gangneung, Republic of Korea, [website](https://drive.google.com/file/d/1vq9VEoX0ABJKZiGlE0F8fMI04yDvsQim/view?usp=drive_link)
+
 18\. Aug 2024 - Invited Lecture: "Supermassive Black Holes \& Active Galactic Nuclei", <br />
 2024 Radio Summer School
 Korea Astronomy & Space Science Institute (KASI), Daejeon, Republic of Korea, [website](https://radio.kasi.re.kr/event/event.php?id=radio24)
@@ -93,6 +101,14 @@ National Astronomical Observatory of Japan (NAOJ), Mitaka, Tokyo, Japan, website
 
 
 **Contributed Talks**
+
+26\. Oct 2024 - Contributed Talk: "Discovery of Limb-Brightening in the Parsec-Scale Jet of NGC 315 through the Global VLBI Alliance", <br />
+SKA-VLBI Workshop in Korea, <br />
+Korea Astronomy \& Space Science Institute, Daejeon, Republic of Korea, [website](https://ska.kasi.re.kr/meetings/2024jul-ska-korea)
+
+25\. Jul 2024 - Contributed Talk: "Faraday Rotation Observed in Active Galactic Nuclei: Applications in the SKA Era", <br />
+2024 Summer SKA-Korea Workshop, <br />
+Dongtan, Republic of Korea, [website](https://ska.kasi.re.kr/meetings/2024jul-ska-korea)
 
 24\. Feb 2024 - Contributed Talk: "Advancements in AGN Jet Research: Insights from the Global VLBI Alliance", <br />
 40 Years Evolution of Radio Interferometry in Japan, <br />

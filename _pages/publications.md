@@ -11,7 +11,7 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 
 16\. Discovery of Limb-Brightening in the Parsec-Scale Jet of NGC 315 through Global VLBI Observations and Its Implications for Jet Models <br />
 **Park, J.**; Zhao, Guang-Yao; Nakamura, Masanori; et al. 2024, ApJL, 973, L45 <br />
-[ADS]() | [arXiv](https://arxiv.org/abs/2408.09069)
+[ADS]()https://ui.adsabs.harvard.edu/abs/2024ApJ...973L..45P/abstract | [arXiv](https://arxiv.org/abs/2408.09069)
 
 15\. Observational Evidence for a Dense Ambient Medium Shaping the Jet in 3C 84 <br />
 **Park, J.**; Kino, M.; Nagai, H.; et al. 2024, A&A, 685, 115 <br />
@@ -82,6 +82,10 @@ Yi, Kunwoo; **Park, Jongho**; Nakamura, Masanori; et al. 2024, A&A, in press <br
 
 
 **Co-Author Papers**
+
+68\. Mapping the Distribution of the Magnetic Field Strength along the NGC 315 Jet <br />
+Kino, Motoki; Ro, Hyunwook; Takahashi, Masaaki; ...; **Park, Jongho**; et al. 2024, ApJ, 973, 100 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2024ApJ...973..100K/abstract) | [arXiv](https://arxiv.org/abs/2407.18444)
 
 67\. First Very Long Baseline Interferometry Detections at 870 μm <br />
 Raymond, Alexander W.; Doeleman, Sheperd S.; Asada, Keiichi; **Event Horizon Telescope Collaboration**; et al. 2024, AJ, 168, 130 <br />
