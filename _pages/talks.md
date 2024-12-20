@@ -19,6 +19,10 @@ Gwacheon, Republic of Korea, [website](https://www.sciencecenter.go.kr/scipia/in
 
 **Invited talks**
 
+21\. Nov 2024 - Invited Talk: "Imaging the Supermassive Black Hole at the Heart of M87 Using Global Millimeter Very Long Baseline Interferometry", <br />
+73rd Workshop on Gravitational Waves and Numerical Relativity
+Pohang University of Science and Technology, Pohang, Republic of Korea, [website](https://cdn.nr.re.kr/73rd_workshop_info/)
+
 20\. Oct 2024 - Invited Talk: "Discovery of Limb-Brightening in the Parsec-Scale Jet of NGC 315 through Global VLBI Observations and Its Implications for Jet Models", <br />
 15th East Asian VLBI Workshop
 The Grand Beach Resort,  Port Dickson, Malaysia, [website](https://sites.google.com/um.edu.my/eavw2024/schedule?authuser=0)
