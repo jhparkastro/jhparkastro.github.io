@@ -83,6 +83,14 @@ Yi, Kunwoo; **Park, Jongho**; Nakamura, Masanori; et al. 2024, A&A, in press <br
 
 **Co-Author Papers**
 
+70\. The putative center in NGC 1052 <br />
+Baczko, Anne-Kathrin; Kadler, Matthias; Ros, Eduardo; ...; **Event Horizon Telescope Collaboration**; et al. 2024, A&A, 692, 205 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2024A%26A...692A.205B/abstract) | [arXiv]()
+
+69\. Broadband multi-wavelength properties of M87 during the 2018 EHT campaign including a very high energy flaring episode <br />
+Algaba, J. C.; Balokovi\'{c}, M.; Chandra, S.; ...; **Event Horizon Telescope Collaboration**; et al. 2024, A&A, 692, 140 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2024A%26A...692A.140A/abstract) | [arXiv](https://arxiv.org/abs/2404.17623)
+
 68\. Mapping the Distribution of the Magnetic Field Strength along the NGC 315 Jet <br />
 Kino, Motoki; Ro, Hyunwook; Takahashi, Masaaki; ...; **Park, Jongho**; et al. 2024, ApJ, 973, 100 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2024ApJ...973..100K/abstract) | [arXiv](https://arxiv.org/abs/2407.18444)
