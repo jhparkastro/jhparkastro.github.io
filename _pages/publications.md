@@ -11,7 +11,7 @@ You can find my papers on [ADS](https://ui.adsabs.harvard.edu/public-libraries/I
 
 16\. Discovery of Limb-Brightening in the Parsec-Scale Jet of NGC 315 through Global VLBI Observations and Its Implications for Jet Models <br />
 **Park, J.**; Zhao, Guang-Yao; Nakamura, Masanori; et al. 2024, ApJL, 973, L45 <br />
-[ADS]()https://ui.adsabs.harvard.edu/abs/2024ApJ...973L..45P/abstract | [arXiv](https://arxiv.org/abs/2408.09069)
+[ADS](https://ui.adsabs.harvard.edu/abs/2024ApJ...973L..45P/abstract) | [arXiv](https://arxiv.org/abs/2408.09069)
 
 15\. Observational Evidence for a Dense Ambient Medium Shaping the Jet in 3C 84 <br />
 **Park, J.**; Kino, M.; Nagai, H.; et al. 2024, A&A, 685, 115 <br />
