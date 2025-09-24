@@ -17,7 +17,45 @@ Taipei, Taiwan, [website](http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c22
 National Gwacheon Science Museum, <br />
 Gwacheon, Republic of Korea, [website](https://www.sciencecenter.go.kr/scipia/introduce/notice/24475)
 
+**School & Lectures**
+
+4\. Aug 2025 - Invited Lecture, "Supermassive Black Holes \& Active Galactic Nuclei", <br />
+2025 Radio Summer School
+Korea Astronomy & Space Science Institute (KASI), Daejeon, Republic of Korea, [website](https://radio.kasi.re.kr/event/event.php?id=radio25)
+
+3\. Jan 2025 - a lecturer of the M2FINDERS Workshop: "a Generalised Polarisation CALibration pipeline (GPCAL)", <br />
+Max Planck Institute for Radio Astronomy (MPIfR)
+Bonn, Germany, [website](https://events.mpifr-bonn.mpg.de/indico/event/421/overview)
+
+2\. Aug 2024 - Invited Lecture, "Supermassive Black Holes \& Active Galactic Nuclei", <br />
+2024 Radio Summer School 
+Korea Astronomy & Space Science Institute (KASI), Daejeon, Republic of Korea, [website](https://radio.kasi.re.kr/event/event.php?id=radio24)
+
+1\. Aug 2023 - Invited Lecture, "Supermassive Black Holes \& Active Galactic Nuclei", <br />
+2023 Radio Summer School
+Seoul National University, Siheung, Republic of Korea, [website](https://radio.kasi.re.kr/event/event.php?id=radiousers2023)
+
 **Invited talks**
+
+26\. Sep 2025 - Invited Talk: "Imaging the Supermassive Black Hole at the Heart of M87 Using Global Millimeter Very Long Baseline Interferometry", <br />
+East Asian ALMA Science Workshop 2025
+Kagoshima University, Kagoshima, Japan, [website](https://www2.nao.ac.jp/~eaarc/Meetings/EAALMA2025/)
+
+25\. Apr 2025 - Invited Colloquium: "Imaging the Supermassive Black Hole at the Heart of M87 Using Global Millimeter Very Long Baseline Interferometry", <br />
+ChungNam National University
+Daejeon, Republic of Korea, [website](https://astro1.cnu.ac.kr/astro/colloquium/univ.do?mode=view&articleNo=544386&article.offset=0&articleLimit=10)
+
+24\. Feb 2025 - Invited Colloquium: "Recent Advances in AGN Jet Studies Enabled by the Global VLBI Alliance", <br />
+Joint Institute for VLBI ERIC (JIVE) & ASTRON
+Dwingeloo, Netherlands
+
+23\. Feb 2025 - Invited Lunch Talk: "Introduction to GPCAL: a Novel Pipeline for Instrumental Polarization Calibration", <br />
+Joint Institute for VLBI ERIC (JIVE) & ASTRON
+Dwingeloo, Netherlands
+
+22\. Jan 2025 - Invited Colloquium: "Recent Advances in AGN Jet Studies Enabled by the Global VLBI Alliance", <br />
+Max-Planck Instsitute for Radio Astronomy
+Bonn, Germany, [website](https://colloquia.mpifr-bonn.mpg.de/?cid=3234)
 
 21\. Nov 2024 - Invited Talk: "Imaging the Supermassive Black Hole at the Heart of M87 Using Global Millimeter Very Long Baseline Interferometry", <br />
 73rd Workshop on Gravitational Waves and Numerical Relativity

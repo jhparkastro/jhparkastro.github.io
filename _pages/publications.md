@@ -83,6 +83,38 @@ Yi, Kunwoo; **Park, Jongho**; Nakamura, Masanori; et al. 2024, A&A, in press <br
 
 **Co-Author Papers**
 
+78\. Horizon-scale variability of from 2017--2021 EHT observations <br />
+**Event Horizon Telescope Collaboration**; et al. 2025, A&A, NA <br />
+[ADS](https://www.aanda.org/component/article?access=doi&doi=10.1051/0004-6361/202555855) | [arXiv]()
+
+77\. Origin of the ring ellipticity in the black hole images of M87* <br />
+Dahale, Rohan; Cho, Ilje; Moriyama, Kotaro; ...; **Event Horizon Telescope Collaboration**; et al. 2025, A&A, 699, 279 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2025A\%26A...699A.279D/abstract) | [arXiv](https://arxiv.org/abs/2505.10333)
+
+76\. First polarization study of the M87 jet and active galactic nuclei at submillimeter wavelengths with ALMA <br />
+Goddi, Ciriaco; Carlos, Douglas F.; Crew, Geoffrey B.; ...; **Event Horizon Telescope Collaboration**; et al. 2025, A&A, 699, 265 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2025A\%26A...699A.265G/abstract) | [arXiv](https://arxiv.org/abs/2505.10181)
+
+75\. Constraining the Mass of a Hypothetical Secondary Black Hole in M87 with the NANOGrav 15 yr Data Set <br />
+Kino, Motoki; Nagashima, Masahiro; Ro, Hyunwook; ...; **Park, Jongho**; et al. 2025, ApJ, 986, 49 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2025ApJ...986...49K/abstract) | [arXiv](https://arxiv.org/abs/2506.12313)
+
+74\. A multifrequency study of sub-parsec jets with the Event Horizon Telescope <br />
+Röder, Jan; Wielgus, Maciek; Lobanov, Andrei P.; ...; **Event Horizon Telescope Collaboration**; et al. 2025, A&A, 695, 233 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2025A\%26A...695A.233R/abstract) | [arXiv](https://arxiv.org/abs/2501.05518)
+
+73\. Gamma-ray flares from the jet of the blazar CTA 102 in 2016–2018 <br />
+Kim, Sanghyun; Lee, Sang-Sung; Algaba, Juan Carlos; ...; **Park, Jongho**; et al. 2025, A&A, 694, 291 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2025A%26A...694A.291K/abstract) | [arXiv](https://arxiv.org/abs/2501.08574)
+
+72\. Enhanced Imaging of M87*: Simulations with the EHT and Extended-KVN <br />
+Cho, Ilje; **Park, Jongho**; Byun, Do-Young; et al. 2025, JKAS, 58, 17 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2024ApJ...973..100K/abstract) | [arXiv](https://arxiv.org/abs/2501.11822)
+
+71\. The persistent shadow of the supermassive black hole of M87: II. Model comparisons and theoretical interpretations <br />
+**Event Horizon Telescope Collaboration**; et al. 2025, A&A, 693, 265 <br />
+[ADS](https://ui.adsabs.harvard.edu/abs/2025A&A...693A.265E/abstract) | [arXiv]()
+
 70\. The putative center in NGC 1052 <br />
 Baczko, Anne-Kathrin; Kadler, Matthias; Ros, Eduardo; ...; **Event Horizon Telescope Collaboration**; et al. 2024, A&A, 692, 205 <br />
 [ADS](https://ui.adsabs.harvard.edu/abs/2024A%26A...692A.205B/abstract) | [arXiv]()
