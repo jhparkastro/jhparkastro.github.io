@@ -37,6 +37,14 @@ Seoul National University, Siheung, Republic of Korea, [website](https://radio.k
 
 **Invited talks**
 
+28\. Dec 2025 - Invited Talk: "A Magnetic Helix at the Heart of M87: New Polarization Insights Challenging Jet Formation Theory", <br />
+The 11th East Asian Meeting on Astronomy
+Toki Messe, Niigata, Japan, [website](https://naoj-global.mtk.nao.ac.jp/eama11/program)
+
+27\. Dec 2025 - Invited Colloquium: "Unveiling the Shadow of a Giant: The M87 Black Hole and its Powerful Jet", <br />
+Ulsan National Institute for Science and Technology (UNIST)
+Ulsan, Republic of Korea, [website](https://physics.unist.ac.kr/seminar/unveiling-the-shadow-of-a-giant-the-m87-black-hole-and-its-powerful-jet/)
+
 26\. Sep 2025 - Invited Talk: "Imaging the Supermassive Black Hole at the Heart of M87 Using Global Millimeter Very Long Baseline Interferometry", <br />
 East Asian ALMA Science Workshop 2025
 Kagoshima University, Kagoshima, Japan, [website](https://www2.nao.ac.jp/~eaarc/Meetings/EAALMA2025/)
@@ -143,6 +151,12 @@ National Astronomical Observatory of Japan (NAOJ), Mitaka, Tokyo, Japan, website
 
 
 **Contributed Talks**
+
+28\. Nov 2025 - Contributed Talk: "Helical Magnetic Field in the Acceleration-Collimation Zone of the M87 Jet", <br />
+16th East Asian VLBI Workshop 2025, PyeongChang, Republic of Korea, [website](https://kvn.kasi.re.kr/event/event.php?id=eavw25)
+
+27\. Oct 2025 - Contributed Talk: "Magnetic Helix in M87 Black Hole Jet Challenges Jet Formation Theory", <br />
+2025 112th KAS Fall Meeting, Sono Calm Jeju, Jeju, Korea, [website](https://www.dropbox.com/scl/fi/0mpwy8oje56yofg9w99b7/KASFALLMEETING-0916-3.pdf?rlkey=8ap8k68n38bhh9dox9avgvv50&st=0ncg2f8b&dl=0)
 
 26\. Oct 2024 - Contributed Talk: "Discovery of Limb-Brightening in the Parsec-Scale Jet of NGC 315 through the Global VLBI Alliance", <br />
 SKA-VLBI Workshop in Korea, <br />
