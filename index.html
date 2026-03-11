@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Park Research Group — KHU</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #f8f9fc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f2f8;
+  --accent: #1a5ce6;
+  --accent-glow: rgba(26, 92, 230, 0.08);
+  --accent-warm: #d94530;
+  --text-primary: #1a1d2b;
+  --text-secondary: #4e5568;
+  --text-dim: #8890a4;
+  --border: #e0e3ec;
+  --border-hover: #c8cdd8;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === NAV === */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(248, 249, 252, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  transition: all 0.3s ease;
+}
+nav.scrolled { background: rgba(248, 249, 252, 0.97); }
+
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo {
+  font-family: var(--font-display); font-size: 1.15rem;
+  color: var(--text-primary); text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 0.88rem; font-weight: 500;
+  letter-spacing: 0.02em; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+
+.hamburger { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
+
+/* === HERO === */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #050508;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 0;
+}
+.hero-bg img {
+  width: 100%; min-height: 100vh;
+  object-fit: cover; opacity: 0.6;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: 
+    radial-gradient(ellipse 70% 70% at 50% 50%, transparent 30%, #050508 75%),
+    linear-gradient(180deg, rgba(5,5,8,0.3) 0%, rgba(5,5,8,0.1) 40%, rgba(5,5,8,0.6) 80%, #050508 100%);
+}
+.hero-inner {
+  max-width: 900px; margin: 0 auto; width: 100%;
+  position: relative; z-index: 1;
+  text-align: center;
+  padding: 140px 2rem 100px;
+}
+.hero-text h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: #f0f1f5;
+}
+.hero-text h1 .highlight {
+  background: linear-gradient(135deg, #6aadff, #a8d0ff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-text .subtitle {
+  font-size: 1.15rem; color: rgba(224,228,240,0.75);
+  line-height: 1.75; margin-bottom: 2.5rem;
+  max-width: 640px; margin-left: auto; margin-right: auto;
+}
+.hero-text .affiliation {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  font-size: 0.85rem; color: rgba(180,188,210,0.6);
+  font-family: var(--font-mono);
+  padding: 0.5rem 1.25rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
+}
+.hero-text .affiliation .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #6aadff; display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.hero-nav-hint {
+  margin-top: 3rem;
+  display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;
+}
+.hero-nav-btn {
+  font-family: var(--font-mono); font-size: 0.75rem;
+  color: rgba(200,210,230,0.7); text-decoration: none;
+  padding: 0.4rem 1rem; border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.hero-nav-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* === SECTIONS === */
+section { padding: 100px 2rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-label {
+  font-family: var(--font-mono); font-size: 0.75rem;
+  color: var(--accent); text-transform: uppercase;
+  letter-spacing: 0.15em; margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 1rem; letter-spacing: -0.02em;
+}
+.section-desc {
+  color: var(--text-secondary); font-size: 1.05rem;
+  max-width: 640px; margin-bottom: 3rem;
+}
+
+/* === RESEARCH === */
+.research-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+}
+.research-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 2rem;
+  transition: all 0.3s ease; cursor: default;
+  position: relative; overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.research-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.research-card .icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--accent-glow);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; margin-bottom: 1.25rem;
+}
+.research-card h3 {
+  font-size: 1.1rem; font-weight: 600;
+  margin-bottom: 0.75rem; letter-spacing: -0.01em;
+}
+.research-card p {
+  color: var(--text-secondary); font-size: 0.9rem;
+  line-height: 1.65;
+}
+.research-card .tag {
+  display: inline-block; margin-top: 1rem;
+  font-family: var(--font-mono); font-size: 0.7rem;
+  color: var(--accent); background: var(--accent-glow);
+  padding: 0.25rem 0.65rem; border-radius: 4px;
+}
+
+/* === PRINCIPAL INVESTIGATOR === */
+.pi-profile {
+  display: grid; grid-template-columns: 300px 1fr; gap: 3rem;
+  align-items: start;
+}
+.pi-photo {
+  border-radius: 14px; overflow: hidden;
+  border: 2px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+.pi-photo img { width: 100%; display: block; }
+.pi-contact-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.25rem;
+}
+.pi-contact-item {
+  display: flex; flex-direction: column; gap: 0.15rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pi-contact-item:last-of-type { border-bottom: none; }
+.pi-contact-label {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--text-dim); text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.pi-contact-item span:last-child,
+.pi-contact-item a { font-size: 0.88rem; }
+.pi-links {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-top: 1rem;
+}
+.pi-bio-col {}
+.pi-bio-heading {
+  font-size: 0.95rem; font-weight: 600;
+  margin-bottom: 0.5rem; margin-top: 1.75rem;
+  color: var(--text-primary);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.pi-bio-heading:first-child { margin-top: 0; }
+.pi-bio-text {
+  color: var(--text-secondary); font-size: 0.9rem;
+  line-height: 1.75;
+}
+.pi-bio-text a:hover { text-decoration: underline; }
+.pi-outreach {
+  margin-top: 2rem; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: 14px;
+  overflow: hidden;
+}
+.pi-outreach img {
+  width: 100%; display: block;
+  max-height: 500px; object-fit: contain;
+  background: #f0f2f8;
+}
+.pi-outreach p {
+  padding: 1rem 1.25rem;
+  font-size: 0.82rem; color: var(--text-dim); line-height: 1.6;
+}
+@media (max-width: 900px) {
+  .pi-profile { grid-template-columns: 1fr; }
+  .pi-photo-col { display: flex; flex-direction: column; align-items: center; }
+  .pi-photo { max-width: 250px; }
+}
+
+/* === TEAM === */
+.team-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem;
+}
+.team-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 1.75rem;
+  text-align: center; transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.team-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+.team-avatar {
+  width: 140px; height: 140px; border-radius: 50%;
+  background: linear-gradient(135deg, #e4e7ef, #f0f2f8);
+  margin: 0 auto 1.25rem; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; color: var(--text-dim);
+  border: 2px solid var(--border);
+}
+.team-avatar img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.team-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.team-card .role {
+  font-size: 0.8rem; color: var(--accent);
+  font-family: var(--font-mono); margin-bottom: 0.75rem;
+}
+.team-card .interests {
+  font-size: 0.82rem; color: var(--text-secondary);
+  line-height: 1.55;
+}
+.team-card.pi { border-color: rgba(26,92,230,0.25); }
+.team-card.pi .team-avatar { border-color: var(--accent); }
+.team-category {
+  font-family: var(--font-mono); font-size: 0.75rem;
+  color: var(--text-dim); text-transform: uppercase;
+  letter-spacing: 0.12em; margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* === PUBLICATIONS === */
+.pub-highlights { display: flex; flex-direction: column; gap: 0; }
+.pub-item {
+  display: flex; align-items: baseline; gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  line-height: 1.55;
+}
+.pub-item:last-child { border-bottom: none; }
+.pub-item:hover { background: rgba(0,0,0,0.015); }
+.pub-year {
+  font-family: var(--font-mono); font-size: 0.78rem;
+  color: var(--accent); white-space: nowrap;
+  flex-shrink: 0; min-width: 28px;
+}
+.pub-info { flex: 1; }
+.pub-info h4 { font-size: 0.85rem; font-weight: 500; display: inline; }
+.pub-info .authors { font-size: 0.78rem; color: var(--text-secondary); display: inline; }
+.pub-info .authors::before { content: ' — '; }
+.pub-info .journal {
+  font-family: var(--font-mono); font-size: 0.72rem;
+  color: var(--text-dim); display: inline;
+}
+.pub-info .journal::before { content: ' '; }
+.pub-links { display: inline-flex; gap: 0.35rem; margin-left: 0.5rem; flex-shrink: 0; }
+.pub-link {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--accent); text-decoration: none;
+  border: 1px solid rgba(26,92,230,0.25);
+  padding: 0.1rem 0.4rem; border-radius: 3px;
+  transition: all 0.2s;
+}
+.pub-link:hover { background: var(--accent-glow); }
+
+.pub-cta {
+  margin-top: 2rem; display: flex; gap: 1.5rem; align-items: center;
+}
+.pub-cta a {
+  font-family: var(--font-mono); font-size: 0.85rem;
+  color: var(--accent); text-decoration: none;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.pub-cta a:hover { text-decoration: underline; }
+
+/* === RESEARCH HIGHLIGHTS === */
+.highlights-stack { display: flex; flex-direction: column; gap: 1.5rem; }
+.highlight-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 2rem 2.25rem;
+  position: relative; overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.highlight-card:hover { border-color: var(--border-hover); }
+.highlight-card::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: linear-gradient(180deg, var(--accent), transparent);
+}
+.highlight-badge {
+  display: inline-block; font-family: var(--font-mono);
+  font-size: 0.7rem; font-weight: 600;
+  color: var(--accent); background: var(--accent-glow);
+  padding: 0.25rem 0.7rem; border-radius: 4px;
+  margin-bottom: 1rem; text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.highlight-badge.eht {
+  color: var(--accent-warm);
+  background: rgba(217,69,48,0.08);
+}
+.highlight-badge .award-star { color: #16a34a; }
+.highlight-content h3 {
+  font-size: 1.15rem; font-weight: 600;
+  margin-bottom: 0.75rem; line-height: 1.4;
+}
+.highlight-summary {
+  color: var(--text-secondary); font-size: 0.9rem;
+  line-height: 1.75; margin-bottom: 1rem;
+}
+.highlight-meta {
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.highlight-journal {
+  font-family: var(--font-mono); font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.highlight-links { display: flex; gap: 0.5rem; }
+.highlight-keywords { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.highlight-figure {
+  margin: 1rem 0 1.25rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0d0f14;
+  position: relative;
+}
+.highlight-figure img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  max-height: 350px;
+  background: #0d0f14;
+}
+.highlight-figure figcaption {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  padding: 0.6rem 1rem;
+  line-height: 1.5;
+  font-family: var(--font-body);
+  border-top: 1px solid var(--border);
+}
+.highlight-figure figcaption em { color: var(--text-secondary); }
+.fig-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  height: 200px; background: linear-gradient(135deg, #f0f2f8, #e4e7ef);
+  color: var(--text-dim); font-family: var(--font-mono); font-size: 0.8rem;
+  text-align: center; padding: 1rem;
+}
+.kw-chip {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  color: var(--text-dim); background: rgba(0,0,0,0.03);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem; border-radius: 3px;
+}
+
+/* === NEWS === */
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.news-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 1.75rem;
+  transition: all 0.3s ease;
+}
+.news-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+.news-date {
+  font-family: var(--font-mono); font-size: 0.72rem;
+  color: var(--text-dim); margin-bottom: 0.75rem;
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+.news-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; line-height: 1.4; }
+.news-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+.news-badge {
+  display: inline-block; font-size: 0.65rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 0.2rem 0.5rem; border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+.news-badge.paper { background: rgba(26,92,230,0.1); color: var(--accent); }
+.news-badge.talk { background: rgba(217,69,48,0.1); color: var(--accent-warm); }
+.news-badge.group { background: rgba(22,163,74,0.1); color: #16a34a; }
+
+/* === SOFTWARE === */
+.software-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+  align-items: center;
+}
+.software-text h3 {
+  font-family: var(--font-display); font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.software-text p { color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7; }
+.software-text .code-tag {
+  font-family: var(--font-mono); font-size: 0.9rem;
+  color: var(--accent); background: var(--accent-glow);
+  padding: 0.3rem 0.75rem; border-radius: 6px;
+  display: inline-block; margin-bottom: 1rem;
+}
+.btn-github {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--accent); color: #fff;
+  padding: 0.7rem 1.4rem; border-radius: 8px;
+  text-decoration: none; font-size: 0.9rem; font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-github:hover { background: #3d7ee6; }
+.software-visual {
+  display: flex; justify-content: center;
+  position: relative;
+}
+.software-code-block {
+  background: #f5f6fa;
+  border: 1px solid var(--border);
+  border-radius: 12px; padding: 1.5rem;
+  font-family: var(--font-mono); font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 400px; width: 100%;
+}
+.software-code-block .kw { color: var(--accent); }
+.software-code-block .str { color: #16a34a; }
+.software-code-block .comment { color: var(--text-dim); }
+
+/* === FOOTER === */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 3rem 2rem;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-left {
+  font-family: var(--font-display); font-size: 1rem;
+}
+.footer-left span { color: var(--accent); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a {
+  color: var(--text-dim); text-decoration: none;
+  font-size: 0.85rem; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--text-secondary); }
+.footer-copy { font-size: 0.75rem; color: var(--text-dim); margin-top: 0.5rem; }
+
+/* === JOIN BANNER === */
+.join-banner {
+  background: linear-gradient(135deg, rgba(26,92,230,0.06) 0%, rgba(217,69,48,0.03) 100%);
+  border: 1px solid rgba(26,92,230,0.15);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  margin-top: 80px;
+}
+.join-banner h3 {
+  font-family: var(--font-display); font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.join-banner p {
+  color: var(--text-secondary); max-width: 600px;
+  margin: 0 auto 1.5rem; line-height: 1.7;
+}
+.btn-contact {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  border: 1px solid var(--accent); color: var(--accent);
+  padding: 0.7rem 1.6rem; border-radius: 8px;
+  text-decoration: none; font-size: 0.9rem; font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-contact:hover { background: var(--accent-glow); }
+
+/* === PAGE TABS === */
+.page-tabs {
+  display: flex; gap: 0.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px; padding: 0.35rem;
+  margin-bottom: 3rem;
+  width: fit-content;
+}
+.page-tab {
+  padding: 0.5rem 1.2rem; border-radius: 7px;
+  font-size: 0.85rem; font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer; border: none; background: none;
+  transition: all 0.2s;
+}
+.page-tab:hover { color: var(--text-primary); }
+.page-tab.active {
+  background: var(--accent); color: #fff;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .hero-inner { padding: 120px 1.5rem 80px; }
+  .hero-text h1 { font-size: 1.8rem; }
+  .research-grid, .news-grid { grid-template-columns: 1fr; }
+  .software-section { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .pub-item { flex-wrap: wrap; }
+  .pub-year { order: -1; }
+  .pub-links { margin-top: 0.5rem; }
+  .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+}
+@media (max-width: 550px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: #c8cdd8; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a0a8b8; }
+
+/* Section divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  max-width: 1200px; margin: 0 auto;
+}
+
+/* === TAB NAVIGATION === */
+section.tab-content { display: none; padding-top: 80px; }
+section.tab-content.active { display: block; }
+.divider-tab { display: none; }
+section.tab-content.active + .divider-tab { display: block; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">KHU <span>Black Hole Research Group</span></a>
+    <ul class="nav-links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#pi">PI</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#software">Software</a></li>
+      <li><a href="#talks">Talks</a></li>
+    </ul>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="heroSection">
+  <div class="hero-bg">
+    <img src="interstellar.gif" alt="Black hole visualization">
+  </div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Imaging <span class="highlight">Supermassive Black Holes</span> &amp; Their Relativistic Jets</h1>
+      <p class="subtitle">
+        We directly image black holes and probe relativistic jet formation using 
+        millimeter VLBI, as part of the Event Horizon Telescope collaboration.
+      </p>
+      <div class="affiliation">
+        <span class="dot"></span>
+        Kyung Hee University · Dept. of Astronomy &amp; Space Science
+      </div>
+      <div class="hero-nav-hint">
+        <a class="hero-nav-btn" data-tab="research">Research</a>
+        <a class="hero-nav-btn" data-tab="highlights">Highlights</a>
+        <a class="hero-nav-btn" data-tab="pi">PI</a>
+        <a class="hero-nav-btn" data-tab="team">Team</a>
+        <a class="hero-nav-btn" data-tab="publications">Publications</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="tab-content">
+  <div class="section-inner">
+    <div class="section-label">// Research Focus</div>
+    <h2 class="section-title">Three Pillars of Our Research</h2>
+    <p class="section-desc">
+      We combine the world's sharpest radio telescope arrays with cutting-edge calibration 
+      and imaging techniques to probe the extreme physics of supermassive black holes.
+    </p>
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="icon">🕳️</div>
+        <h3>Direct Imaging of Supermassive Black Holes</h3>
+        <p>
+          We use millimeter VLBI arrays — including the Event Horizon Telescope and 
+          Global Millimeter VLBI Array — to directly image supermassive black holes 
+          at event-horizon scales. Our group co-leads the EHT imaging effort, 
+          developing novel calibration tools such as GPCAL to produce the highest-fidelity 
+          images of black hole shadows and their surrounding plasma.
+        </p>
+        <span class="tag">EHT · GMVA · GPCAL · M87* · Sgr A*</span>
+      </div>
+      <div class="research-card">
+        <div class="icon">🧲</div>
+        <h3>Polarimetry &amp; Magnetic Fields</h3>
+        <p>
+          Magnetic fields are thought to drive the most energetic phenomena around 
+          black holes — from launching jets to regulating accretion. We develop 
+          and apply advanced polarimetric techniques to map the magnetic field 
+          geometry, strength, and evolution in AGN jets via Faraday rotation 
+          measurements, rotation measure synthesis, and multi-frequency VLBI polarimetry.
+        </p>
+        <span class="tag">Faraday Rotation · EVPA · Helical B-field · ALMA</span>
+      </div>
+      <div class="research-card">
+        <div class="icon">⚡</div>
+        <h3>Formation of Relativistic Jets</h3>
+        <p>
+          How are jets launched, collimated into narrow beams, and accelerated to 
+          nearly the speed of light? We tackle this question by tracing jet kinematics, 
+          transverse structure, and collimation profiles from sub-parsec to kiloparsec 
+          scales, combining multi-epoch VLBI monitoring with the Global VLBI Alliance 
+          to achieve unprecedented angular resolution.
+        </p>
+        <span class="tag">M87 · NGC 315 · 3C 84 · GVA · SKA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH HIGHLIGHTS -->
+<section id="highlights" class="tab-content">
+  <div class="section-inner">
+    <div class="section-label">// Research Highlights</div>
+    <h2 class="section-title">Recent Key Results</h2>
+    <p class="section-desc">Selected recent results from our group and EHT collaborations.</p>
+
+    <div class="highlights-stack">
+
+      <!-- Highlight 1: M87 Helical Magnetic Field -->
+      <div class="highlight-card">
+        <div class="highlight-badge">1st Author · 2026</div>
+        <div class="highlight-content">
+          <h3>Magnetic DNA of M87: Unveiling a Helical Field in the Jet's Engine Room</h3>
+          <p class="highlight-summary">
+            <strong>Why does it matter?</strong> Supermassive black holes launch powerful jets of plasma at nearly the speed of light, but the engine behind this acceleration remains one of the biggest open questions in astrophysics. Theory predicts that magnetic fields play a key role — specifically, they should twist into a toroidal (donut-like) shape as the jet speeds up. But does this really happen?
+          </p>
+          <p class="highlight-summary">
+            <strong>What we found:</strong> We observed M87's jet simultaneously at six radio frequencies (1.4–24.4 GHz) using VLBI telescopes around the globe, then carefully removed the distorting effects of Faraday rotation to reveal the jet's intrinsic magnetic field structure. For the first time, we continuously mapped the "acceleration–collimation zone" — the region where the jet is still speeding up and being focused — spanning roughly 9,000 to 360,000 gravitational radii from the black hole. What we found surprised us: the magnetic field has a clear <em>helical</em> shape, but it retains a much stronger poloidal (along-the-jet) component than standard models predict. This means that something — likely magnetic energy dissipation — is preventing the expected rapid winding of field lines. As a bonus, the handedness of the helix provides an independent measurement of the black hole's spin direction, agreeing with what EHT saw at the event-horizon scale.
+          </p>
+          <figure class="highlight-figure">
+            <img src="m87pol_artist.jpg" alt="Artist's illustration of M87 jet helical magnetic field structure">
+            <figcaption><em>Artist's illustration of M87's helical magnetic field.</em> The tightly wound helical field near the black hole gradually unwinds as the jet accelerates outward. Credit: Park et al. 2026, ApJ.</figcaption>
+          </figure>
+          <div class="highlight-meta">
+            <span class="highlight-journal">Park, J. et al. 2026, ApJL, 996, L22</span>
+            <div class="highlight-links">
+              <a href="https://arxiv.org/abs/2511.13008" class="pub-link">arXiv</a>
+              <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ae1ffe" class="pub-link">Journal</a>
+            </div>
+          </div>
+          <div class="highlight-keywords">
+            <span class="kw-chip">M87</span>
+            <span class="kw-chip">Helical B-field</span>
+            <span class="kw-chip">VLBI Polarimetry</span>
+            <span class="kw-chip">Jet Acceleration</span>
+            <span class="kw-chip">Black Hole Spin</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlight 2: M87* Variability 2017-2021 -->
+      <div class="highlight-card">
+        <div class="highlight-badge eht">EHT Collaboration · 2025</div>
+        <div class="highlight-content">
+          <h3>Watching the Black Hole Evolve: M87* Shadow Over Four Years</h3>
+          <p class="highlight-summary">
+            <strong>Why does it matter?</strong> When the EHT released the first-ever image of a black hole in 2019, a natural question followed: does it always look the same? General relativity predicts that the bright ring's <em>size</em> — set by the black hole's mass and the curvature of spacetime — should remain constant. But the <em>brightness pattern</em> around the ring, driven by turbulent plasma, could change dramatically from year to year. Testing this prediction requires observing the same black hole repeatedly.
+          </p>
+          <p class="highlight-summary">
+            <strong>What we found:</strong> Comparing EHT observations from 2017, 2018, and 2021, the ring diameter stayed remarkably stable, providing the strongest confirmation yet of the persistent black hole shadow predicted by Einstein's theory. However, the brightest spot on the ring rotated substantially — shifting from the southeast (2017) to the southwest (2018) and further evolving by 2021. The polarization pattern also changed dramatically, revealing dynamically rearranging magnetic fields near the event horizon. These results are consistent with magnetically arrested disk (MAD) accretion models, where strong magnetic fields regulate the inflow of matter.
+          </p>
+          <p class="highlight-summary" style="color: var(--accent); font-size: 0.85rem;">
+            <strong>PI Contribution:</strong> Prof. Park served as a co-leader of the EHT Imaging Working Group. His group's GPCAL software was employed as one of the main polarization calibration pipelines for this study, enabling the high-fidelity multi-epoch polarimetric images.
+          </p>
+          <figure class="highlight-figure">
+            <img src="https://eventhorizontelescope.org/sites/g/files/omnuum3116/files/2025-12/resampled_triptych_EHT_labeled_1.png" alt="M87 black hole images from 2017, 2018, and 2021 showing polarization evolution">
+            <figcaption><em>M87* in polarized light across three epochs (2017, 2018, 2021).</em> The ring size remains constant — confirming the persistent shadow — while the polarization pattern (tick marks) dramatically evolves, including a direction reversal between 2017 and 2021. Credit: EHT Collaboration (CC BY 4.0).</figcaption>
+          </figure>
+          <div class="highlight-meta">
+            <span class="highlight-journal">EHT Collaboration 2025, A&A, 699, A341</span>
+            <div class="highlight-links">
+              <a href="https://www.aanda.org/articles/aa/full_html/2025/12/aa55855-25/aa55855-25.html" class="pub-link">Journal</a>
+            </div>
+          </div>
+          <div class="highlight-keywords">
+            <span class="kw-chip">EHT</span>
+            <span class="kw-chip">M87*</span>
+            <span class="kw-chip">Black Hole Shadow</span>
+            <span class="kw-chip">Variability</span>
+            <span class="kw-chip">MAD Accretion</span>
+            <span class="kw-chip">GPCAL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlight 3: Persistent Shadow 2018 -->
+      <div class="highlight-card">
+        <div class="highlight-badge eht">EHT Collaboration · 2024 · <span style="color:#16a34a;">★ Early Career Award 2025</span></div>
+        <div class="highlight-content">
+          <h3>The Persistent Shadow: Re-detecting M87's Black Hole One Year Later</h3>
+          <p class="highlight-summary">
+            <strong>Why does it matter?</strong> A single observation of a black hole, however groundbreaking, could be a fluke — an artifact of calibration, imaging assumptions, or transient plasma structures. The only way to be sure we are truly seeing a black hole's shadow is to observe it again and check whether the fundamental structure persists. This is also a direct test of general relativity: if Einstein is right, the ring size is determined purely by the black hole's mass, so it should not change over human timescales.
+          </p>
+          <p class="highlight-summary">
+            <strong>What we found:</strong> The EHT observed M87* again in April 2018 — exactly one year after the historic first detection — with the Greenland Telescope newly added to the array. The 2018 image confirmed the same ring-and-shadow structure with a consistent diameter of ~42 microarcseconds, providing a powerful independent verification of the 2017 result. At the same time, the position of the brightest part of the ring shifted from southeast to southwest, revealing the dynamical nature of the plasma flowing around the black hole. This was the first time a black hole's temporal evolution was directly observed at event-horizon scales.
+          </p>
+          <p class="highlight-summary" style="color: var(--accent); font-size: 0.85rem;">
+            <strong>PI Contribution:</strong> Prof. Park served as a co-leader of the EHT Imaging Working Group, directly overseeing the process of converting raw interferometric data into the final black hole image. GPCAL was a key calibration tool for the polarization analysis of the M87* data. In recognition of his contributions to EHT imaging and calibration, he was awarded the <strong>EHT Early Career Award (2025)</strong>.
+          </p>
+          <figure class="highlight-figure">
+            <img src="EHT2018.png" alt="M87 black hole 2017 vs 2018 comparison showing persistent shadow">
+            <figcaption><em>M87* observed in 2017 (left) and 2018 (right).</em> The ring diameter (~42 μas) is unchanged, confirming the persistent shadow predicted by general relativity. The brightest region shifted ~30° counterclockwise, consistent with turbulent plasma dynamics. Credit: EHT Collaboration (CC BY 4.0).</figcaption>
+          </figure>
+          <div class="highlight-meta">
+            <span class="highlight-journal">EHT Collaboration 2024, A&A, 681, A79</span>
+            <div class="highlight-links">
+              <a href="https://www.aanda.org/articles/aa/pdf/2024/01/aa47932-23.pdf" class="pub-link">Journal (PDF)</a>
+            </div>
+          </div>
+          <div class="highlight-keywords">
+            <span class="kw-chip">EHT</span>
+            <span class="kw-chip">M87*</span>
+            <span class="kw-chip">General Relativity</span>
+            <span class="kw-chip">Imaging Co-Lead</span>
+            <span class="kw-chip">Greenland Telescope</span>
+            <span class="kw-chip">EC Award 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlight 4: NGC 315 Limb-Brightening -->
+      <div class="highlight-card">
+        <div class="highlight-badge">1st Author · 2024</div>
+        <div class="highlight-content">
+          <h3>Are All AGN Jets Edge-Brightened? The NGC 315 Surprise</h3>
+          <p class="highlight-summary">
+            <strong>Why does it matter?</strong> When we look at jets from distant blazars (AGN viewed nearly head-on), they appear brightest along their central axis. But jets in nearby radio galaxies (viewed from the side) often look brighter at their edges. The leading explanation is the "spine-sheath" model: the jet center moves so fast that its emission is beamed away from us when viewed at a large angle. But there is a more exciting possibility — maybe <em>all</em> jets are intrinsically edge-brightened, and we just did not have sharp enough "eyes" to see it until now.
+          </p>
+          <p class="highlight-summary">
+            <strong>What we found:</strong> We organized a coordinated observation of the giant radio galaxy NGC 315 using 22 radio telescopes across five continents — the Global VLBI Alliance (GVA) — at 22 GHz. This massive array, combining the EVN, VLBA, phased VLA, KVN, and LBA, provided dramatically better angular resolution than any previous observation of this source. By applying superresolution imaging techniques, we transversely resolved the parsec-scale jet for the first time. The result: NGC 315's jet, previously thought to be center-brightened, is clearly edge-brightened. Given the jet's relatively large viewing angle (~50°), simple Doppler boosting models struggle to explain this — suggesting that particle acceleration mechanisms operating preferentially at the jet edges may be at play.
+          </p>
+          <figure class="highlight-figure">
+            <img src="ngc315-000.png" alt="NGC 315 jet: VLBA center-brightened vs GVA edge-brightened morphology comparison">
+            <figcaption><em>NGC 315 jet at 22 GHz: VLBA (left) vs. Global VLBI Alliance (center).</em> Previously center-brightened with VLBA-only resolution, the jet now shows clear edge-brightening with the 22-station GVA array. Right: dramatically improved uv-coverage (blue) compared to VLBA alone (magenta). Credit: Park et al. 2024, ApJL.</figcaption>
+          </figure>
+          <div class="highlight-meta">
+            <span class="highlight-journal">Park, J. et al. 2024, ApJL, 973, L45</span>
+            <div class="highlight-links">
+              <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...973L..45P/abstract" class="pub-link">ADS</a>
+              <a href="https://arxiv.org/abs/2408.09069" class="pub-link">arXiv</a>
+              <a href="https://iopscience.iop.org/article/10.3847/2041-8213/ad7137" class="pub-link">Journal</a>
+            </div>
+          </div>
+          <div class="highlight-keywords">
+            <span class="kw-chip">NGC 315</span>
+            <span class="kw-chip">Limb-Brightening</span>
+            <span class="kw-chip">Global VLBI Alliance</span>
+            <span class="kw-chip">Superresolution</span>
+            <span class="kw-chip">Spine-Sheath Model</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPAL INVESTIGATOR -->
+<section id="pi" class="tab-content">
+  <div class="section-inner">
+    <div class="section-label">// Principal Investigator</div>
+    <h2 class="section-title">Jongho Park</h2>
+
+    <div class="pi-profile">
+      <div class="pi-photo-col">
+        <div class="pi-photo">
+          <img src="https://jhparkastro.github.io/images/jpark_thule.jpg" alt="Prof. Jongho Park">
+        </div>
+        <div class="pi-contact-card">
+          <div class="pi-contact-item">
+            <span class="pi-contact-label">Position</span>
+            <span>Assistant Professor</span>
+          </div>
+          <div class="pi-contact-item">
+            <span class="pi-contact-label">Affiliation</span>
+            <span>Dept. of Astronomy & Space Science, Kyung Hee University</span>
+          </div>
+          <div class="pi-contact-item">
+            <span class="pi-contact-label">Office</span>
+            <span>Room 534, College of Applied Science</span>
+          </div>
+          <div class="pi-contact-item">
+            <span class="pi-contact-label">Email</span>
+            <a href="mailto:jparkastro@khu.ac.kr" style="color:var(--accent);text-decoration:none;">jparkastro@khu.ac.kr</a>
+          </div>
+          <div class="pi-links">
+            <a href="https://github.com/jhparkastro" class="pub-link">GitHub</a>
+            <a href="http://orcid.org/0000-0001-6558-9053" class="pub-link">ORCID</a>
+            <a href="https://ui.adsabs.harvard.edu/public-libraries/Ifwhke1sSZStMcVAe8B9gg" class="pub-link">ADS</a>
+            <a href="https://jhparkastro.github.io/cv/" class="pub-link">CV</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pi-bio-col">
+        <h3 class="pi-bio-heading">Research Interests</h3>
+        <p class="pi-bio-text">
+          My research centers on the direct imaging of supermassive black holes and the physics of relativistic jets 
+          in active galactic nuclei (AGN), with a particular focus on the nearby radio galaxy M87. I apply very long 
+          baseline interferometric (VLBI) techniques — at millimeter and centimeter wavelengths — to investigate the 
+          mechanisms responsible for launching, collimating, and accelerating jets to relativistic speeds. I am also 
+          deeply engaged in the calibration and imaging of VLBI data, and have developed 
+          <a href="https://github.com/jhparkastro/gpcal" style="color:var(--accent);">GPCAL</a>, 
+          a novel polarization calibration pipeline that served as one of the main calibration tools for both the 
+          <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...910L..12E/abstract" style="color:var(--accent);">first polarized image of the M87 black hole</a> 
+          (EHT Collaboration 2021) and the 
+          <a href="https://www.aanda.org/articles/aa/full_html/2025/12/aa55855-25/aa55855-25.html" style="color:var(--accent);">multi-year polarimetric variability study of M87*</a> 
+          (EHT Collaboration 2025).
+        </p>
+
+        <h3 class="pi-bio-heading">Roles in International Collaborations</h3>
+        <p class="pi-bio-text">
+          I serve as a co-leader of the <strong>Imaging Working Group</strong> of the Event Horizon Telescope, 
+          where I oversee the process of converting raw interferometric data into science-ready black hole images. 
+          I am also actively involved in the 
+          Global Millimeter VLBI Array (GMVA) and the Global VLBI Alliance (GVA) for high-resolution AGN jet studies.
+        </p>
+
+        <h3 class="pi-bio-heading">Awards</h3>
+        <p class="pi-bio-text">
+          <strong style="color:#16a34a;">EHT Early Career Award (2025)</strong> — Event Horizon Telescope Collaboration, for significant contribution as a co-leader of the imaging team for the 2018 EHT M87 black hole observations<br>
+          <strong style="color:#16a34a;">EHT Early Career Award (2021)</strong> — Event Horizon Telescope Collaboration, for significant contribution to the first polarimetric imaging of the M87 black hole<br>
+          <strong style="color:#16a34a;">젊은 천문학자상 (Young Astronomer Award, 2024)</strong> — Korean Astronomical Society (한국천문학회)<br>
+          <strong style="color:#16a34a;">POSCO Science Fellowship (2024)</strong> — POSCO TJ Park Foundation (포스코청암재단), awarded to outstanding early-career professors at Korean universities for exceptional research capabilities
+        </p>
+
+        <h3 class="pi-bio-heading">Academic Background</h3>
+        <p class="pi-bio-text">
+          I received my B.S. (2013) and Ph.D. (2019) in Astronomy from Seoul National University, 
+          working under the supervision of Prof. Sascha Trippe. I then held postdoctoral and fellowship positions 
+          at the Academia Sinica Institute of Astronomy and Astrophysics (ASIAA) in Taiwan (2019–2022), including an 
+          EACOA Fellowship, where I contributed to the Greenland Telescope (GLT) project. 
+          I joined the Korea Astronomy and Space Science Institute (KASI) as a tenured scientist in 2022, 
+          and have been on the faculty at Kyung Hee University since 2023.
+        </p>
+
+        <div class="pi-outreach">
+          <img src="http://jhparkastro.github.io/files/Gwacheon.jpg" alt="Prof. Park giving a public talk at Gwacheon Science Museum">
+          <p>
+            Public outreach talk at the National Gwacheon Science Museum (April 2024) on 
+            "Seeing the Black Hole: EHT Black Hole Observation," attended by approximately 250 people 
+            including many K–12 students.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="tab-content">
+  <div class="section-inner">
+    <div class="section-label">// Our Team</div>
+    <h2 class="section-title">Group Members</h2>
+    <p class="section-desc">
+      Our group brings together postdocs, graduate students, and undergraduates, 
+      united by a shared passion for understanding the extreme universe.
+    </p>
+    <!-- Postdoctoral Researchers -->
+    <div class="team-category">Postdoctoral Researchers</div>
+    <div class="team-grid" style="margin-bottom: 2.5rem;">
+      <div class="team-card">
+        <div class="team-avatar"><img src="member_kunwoo_yi.png" alt="Kunwoo Yi"></div>
+        <h3>Kunwoo Yi</h3>
+        <div class="role">Postdoctoral Researcher</div>
+        <div class="interests">Relativistic Jets, Bayesian VLBI Imaging</div>
+      </div>
+    </div>
+
+    <!-- Graduate Students -->
+    <div class="team-category">Graduate Students</div>
+    <div class="team-grid" style="margin-bottom: 2.5rem; grid-template-columns: repeat(3, 1fr);">
+      <div class="team-card">
+        <div class="team-avatar"><img src="member_imkwang_kang.png" alt="Imkwang Kang"></div>
+        <h3>Imkwang Kang</h3>
+        <div class="role">Ph.D. Student · 3rd year</div>
+        <div class="interests">Deep Learning Algorithm, Development of VLBI Imaging Technique, Imaging of the M87 Jet</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="member_yunjeong_lee.png" alt="Yunjeong Lee"></div>
+        <h3>Yunjeong Lee</h3>
+        <div class="role">Ph.D. Student · 3rd year</div>
+        <div class="interests">The Relativistic Jet in the Archetypal Quasar 3C 273, Faraday Rotation, Magnetic Fields</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="member_segyoung_kim.png" alt="Segyoung Kim"></div>
+        <h3>Segyoung Kim</h3>
+        <div class="role">Ph.D. Student · 1st year</div>
+        <div class="interests">Calibration and Imaging of EHT Data & mm-VLBI Data, AGNs</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="member_jeongwoo_yoo.png" alt="Jeongwoo Yoo"></div>
+        <h3>Jeongwoo Yoo</h3>
+        <div class="role">Master Student · 3rd year</div>
+        <div class="interests">Fanaroff-Riley Type I & II Dichotomy, AGN Jet Science Utilizing the Global VLBI Alliance</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="member_yeji_cho.png" alt="Yeji Cho"></div>
+        <h3>Yeji Cho</h3>
+        <div class="role">Master Student · 2nd year</div>
+        <div class="interests">Supermassive Black Holes in Cold-gas Rich Environment, AGN Feedback</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar"><img src="member_yubin_jeong.png" alt="Yubin Jeong"></div>
+        <h3>Yubin Jeong</h3>
+        <div class="role">Master Student · 2nd year</div>
+        <div class="interests">Supermassive Black Hole Environment, Depolarization in AGN Jets</div>
+      </div>
+    </div>
+
+    <!-- Undergraduate Students -->
+    <div class="team-category">Undergraduate Students</div>
+    <div class="team-grid">
+      <div class="team-card undergrad">
+        <div class="team-avatar"><img src="member_jonghan_kim.png" alt="Jonghan Kim"></div>
+        <h3>Jonghan Kim</h3>
+        <div class="role">Undergraduate · 4th year</div>
+        <div class="interests">Stratification of Black Hole Relativistic Jets</div>
+      </div>
+      <div class="team-card undergrad">
+        <div class="team-avatar"><img src="member_woojae_song.png" alt="Woojae Song"></div>
+        <h3>Woojae Song</h3>
+        <div class="role">Undergraduate · 4th year</div>
+        <div class="interests">ALMA Polarimetry</div>
+      </div>
+      <div class="team-card undergrad">
+        <div class="team-avatar"><img src="member_yeonjae_jeong.png" alt="Yeonjae Jeong"></div>
+        <h3>Yeonjae Jeong</h3>
+        <div class="role">Undergraduate · 2nd year</div>
+        <div class="interests">The M87 Jet Kinematics</div>
+      </div>
+    </div>
+
+    <div class="join-banner">
+      <h3>Join Our Group</h3>
+      <p>
+        We are always looking for highly motivated students and researchers interested in 
+        black hole physics, VLBI techniques, and AGN jets. Graduate student positions (M.S./Ph.D.) are available.
+      </p>
+      <a href="mailto:jparkastro@khu.ac.kr" class="btn-contact">
+        jparkastro@khu.ac.kr →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="tab-content">
+  <div class="section-inner">
+    <div class="section-label">// Publications</div>
+    <h2 class="section-title">Publications</h2>
+    <p class="section-desc">
+      You can find my papers on <a href="https://ui.adsabs.harvard.edu/public-libraries/Ifwhke1sSZStMcVAe8B9gg" style="color:var(--accent);">ADS</a>.
+    </p>
+
+    <h3 style="font-size:1rem;color:var(--accent);margin:1.5rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">First Author Papers</h3>
+    <div class="pub-highlights">
+      <div class="pub-item">
+        <span class="pub-year">17.</span>
+        <div class="pub-info">
+          <h4>Helical Magnetic Field in the Acceleration–Collimation Zone of the M87 Jet</h4>
+          <div class="authors"><strong>Park, J.</strong>; Takahashi, K.; Toma, K.; et al.</div>
+          <div class="journal">2026, ApJL, 996, L22</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2026ApJ...996L..22P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2511.13008" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">16.</span>
+        <div class="pub-info">
+          <h4>Discovery of Limb-Brightening in the Parsec-Scale Jet of NGC 315 through Global VLBI Observations</h4>
+          <div class="authors"><strong>Park, J.</strong>; Zhao, G.-Y.; Nakamura, M.; et al.</div>
+          <div class="journal">2024, ApJL, 973, L45</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...973L..45P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2408.09069" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">15.</span>
+        <div class="pub-info">
+          <h4>Observational Evidence for a Dense Ambient Medium Shaping the Jet in 3C 84</h4>
+          <div class="authors"><strong>Park, J.</strong>; Kino, M.; Nagai, H.; et al.</div>
+          <div class="journal">2024, A&A, 685, 115</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...685A.115P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2311.08647" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">14.</span>
+        <div class="pub-info">
+          <h4>Calibrating VLBI Polarization Data Using GPCAL. II. Time-dependent Calibration</h4>
+          <div class="authors"><strong>Park, J.</strong>; Asada, K.; Byun, D.-Y.</div>
+          <div class="journal">2023, ApJ, 958, 28</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...958...28P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2310.03244" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">13.</span>
+        <div class="pub-info">
+          <h4>Calibrating VLBI Polarization Data Using GPCAL. I. Frequency-dependent Calibration</h4>
+          <div class="authors"><strong>Park, J.</strong>; Asada, K.; Byun, D.-Y.</div>
+          <div class="journal">2023, ApJ, 958, 27</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...958...27P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2310.03242" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">12.</span>
+        <div class="pub-info">
+          <h4>Polarization Observations of AGN Jets: Past and Future</h4>
+          <div class="authors"><strong>Park, J.</strong>; Algaba, J. C.</div>
+          <div class="journal">2022, Galaxies, 10(5), 102</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://www.mdpi.com/2075-4434/10/5/102" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2210.13819" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">11.</span>
+        <div class="pub-info">
+          <h4>A revised view of the linear polarization in the subparsec core of M87 at 7 mm</h4>
+          <div class="authors"><strong>Park, J.</strong>; Asada, K.; Nakamura, M.; et al.</div>
+          <div class="journal">2021, ApJ, 922, 180</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...922..180P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2107.13243" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">10.</span>
+        <div class="pub-info">
+          <h4>Jet collimation and acceleration in the giant radio galaxy NGC 315</h4>
+          <div class="authors"><strong>Park, J.</strong>; Hada, K.; Nakamura, M.; et al.</div>
+          <div class="journal">2021, ApJ, 909, 76</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...909...76P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2012.14154" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">9.</span>
+        <div class="pub-info">
+          <h4>GPCAL: a generalized calibration pipeline for instrumental polarization in VLBI data</h4>
+          <div class="authors"><strong>Park, J.</strong>; Byun, D.-Y.; Asada, K.; Yun, Y.</div>
+          <div class="journal">2021, ApJ, 906, 85</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...906...85P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2011.09713" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">8.</span>
+        <div class="pub-info">
+          <h4>Kinematics of the M87 Jet in the Collimation Zone: Gradual Acceleration and Velocity Stratification</h4>
+          <div class="authors"><strong>Park, J.</strong>; Hada, K.; Kino, M.; et al.</div>
+          <div class="journal">2019, ApJ, 887, 147</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...887..147P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/1911.02279" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">7.</span>
+        <div class="pub-info">
+          <h4>Ejection of Double knots from the radio core of PKS 1510-089 during the strong gamma-ray flares in 2015</h4>
+          <div class="authors"><strong>Park, J.</strong>; Lee, S.-S.; Kim, J.-Y.; et al.</div>
+          <div class="journal">2019, ApJ, 877, 106</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...877..106P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/1904.11118" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">6.</span>
+        <div class="pub-info">
+          <h4>Faraday Rotation in the Jet of M87 Inside the Bondi Radius</h4>
+          <div class="authors"><strong>Park, J.</strong>; Hada, K.; Kino, M.; et al.</div>
+          <div class="journal">2019, ApJ, 871, 257</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...871..257P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/1812.08386" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">5.</span>
+        <div class="pub-info">
+          <h4>Revealing the Nature of Blazar Radio Cores through Multifrequency Polarization Observations with KVN</h4>
+          <div class="authors"><strong>Park, J.</strong>; Kam, M.; Trippe, S.; et al.</div>
+          <div class="journal">2018, ApJ, 860, 112</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2018ApJ...860..112P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/1805.04299" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">4.</span>
+        <div class="pub-info">
+          <h4>The Long-Term Centimeter Variability of AGN: a New Relation between Variability Timescale and Accretion Rate</h4>
+          <div class="authors"><strong>Park, J.</strong>; Trippe, S.</div>
+          <div class="journal">2017, ApJ, 834, 157</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2017ApJ...834..157P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/1611.04729" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">3.</span>
+        <div class="pub-info">
+          <h4>No asymmetric outflows from Sagittarius A* during the pericenter passage of G2</h4>
+          <div class="authors"><strong>Park, J.</strong>; Trippe, S.; Krichbaum, T. P.; et al.</div>
+          <div class="journal">2015, A&A, 576, L16</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2015A%26A...576L..16P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/1503.08982" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">2.</span>
+        <div class="pub-info">
+          <h4>Radio Variability and Random Walk Noise Properties of Four Blazars</h4>
+          <div class="authors"><strong>Park, J.</strong>; Trippe, S.</div>
+          <div class="journal">2014, ApJ, 785, 76</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2014ApJ...785...76P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/1402.6385" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">1.</span>
+        <div class="pub-info">
+          <h4>Multiple Emission States in Active Galactic Nuclei</h4>
+          <div class="authors"><strong>Park, J.</strong>; Trippe, S.</div>
+          <div class="journal">2012, JKAS, 45, 147</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2012JKAS...45..147P/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/1210.8248" class="pub-link">arXiv</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1rem;color:var(--accent);margin:2rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">Papers by Students (Corresponding Author)</h3>
+    <div class="pub-highlights">
+      <div class="pub-item">
+        <span class="pub-year">1.</span>
+        <div class="pub-info">
+          <h4>Jet Collimation and Acceleration in the Flat Spectrum Radio Quasar 1928+738</h4>
+          <div class="authors">Yi, Kunwoo; <strong>Park, Jongho</strong>; Nakamura, M.; Hada, K.; et al.</div>
+          <div class="journal">2024, A&amp;A, 688, A94</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...688A..94Y/abstract" class="pub-link">ADS</a>
+          <a href="https://arxiv.org/abs/2405.03365" class="pub-link">arXiv</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1rem;color:var(--accent);margin:2rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">Co-Author Papers</h3>
+    <div class="pub-highlights">
+      <div class="pub-item">
+        <span class="pub-year">78.</span>
+        <div class="pub-info">
+          <h4>Horizon-scale variability of from 2017–2021 EHT observations</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2025, A&A</div>
+        </div>
+        <div class="pub-links"><a href="https://www.aanda.org/component/article?access=doi&doi=10.1051/0004-6361/202555855" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">77.</span>
+        <div class="pub-info">
+          <h4>Origin of the ring ellipticity in the black hole images of M87*</h4>
+          <div class="authors">Dahale, R.; Cho, I.; Moriyama, K.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2025, A&A, 699, 279</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...699A.279D/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2505.10333" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">76.</span>
+        <div class="pub-info">
+          <h4>First polarization study of the M87 jet and AGN at submillimeter wavelengths with ALMA</h4>
+          <div class="authors">Goddi, C.; Carlos, D. F.; Crew, G. B.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2025, A&A, 699, 265</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...699A.265G/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2505.10181" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">75.</span>
+        <div class="pub-info">
+          <h4>Constraining the Mass of a Hypothetical Secondary Black Hole in M87 with NANOGrav 15 yr Data Set</h4>
+          <div class="authors">Kino, M.; Nagashima, M.; Ro, H.; …; Park, J.; et al.</div>
+          <div class="journal">2025, ApJ, 986, 49</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...986...49K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2506.12313" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">74.</span>
+        <div class="pub-info">
+          <h4>A multifrequency study of sub-parsec jets with the Event Horizon Telescope</h4>
+          <div class="authors">Röder, J.; Wielgus, M.; Lobanov, A. P.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2025, A&A, 695, 233</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...695A.233R/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2501.05518" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">73.</span>
+        <div class="pub-info">
+          <h4>Gamma-ray flares from the jet of the blazar CTA 102 in 2016–2018</h4>
+          <div class="authors">Kim, S.; Lee, S.-S.; Algaba, J. C.; …; Park, J.; et al.</div>
+          <div class="journal">2025, A&A, 694, 291</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...694A.291K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2501.08574" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">72.</span>
+        <div class="pub-info">
+          <h4>Enhanced Imaging of M87*: Simulations with the EHT and Extended-KVN</h4>
+          <div class="authors">Cho, I.; Park, J.; Byun, D.-Y.; et al.</div>
+          <div class="journal">2025, JKAS, 58, 17</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...973..100K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2501.11822" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">71.</span>
+        <div class="pub-info">
+          <h4>The persistent shadow of the supermassive black hole of M87: II. Model comparisons and theoretical interpretations</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2025, A&A, 693, 265</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2025A&A...693A.265E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">70.</span>
+        <div class="pub-info">
+          <h4>The putative center in NGC 1052</h4>
+          <div class="authors">Baczko, A.-K.; Kadler, M.; Ros, E.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2024, A&A, 692, 205</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...692A.205B/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">69.</span>
+        <div class="pub-info">
+          <h4>Broadband multi-wavelength properties of M87 during the 2018 EHT campaign including a very high energy flaring episode</h4>
+          <div class="authors">Algaba, J. C.; Baloković, M.; Chandra, S.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2024, A&A, 692, 140</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...692A.140A/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2404.17623" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">68.</span>
+        <div class="pub-info">
+          <h4>Mapping the Distribution of the Magnetic Field Strength along the NGC 315 Jet</h4>
+          <div class="authors">Kino, M.; Ro, H.; Takahashi, M.; …; Park, J.; et al.</div>
+          <div class="journal">2024, ApJ, 973, 100</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...973..100K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2407.18444" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">67.</span>
+        <div class="pub-info">
+          <h4>First Very Long Baseline Interferometry Detections at 870 μm</h4>
+          <div class="authors">Raymond, A. W.; Doeleman, S. S.; Asada, K.; EHT Collaboration; et al.</div>
+          <div class="journal">2024, AJ, 168, 130</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024AJ....168..130R/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">66.</span>
+        <div class="pub-info">
+          <h4>Evolution of the Termination Region of the Parsec-Scale Jet of 3C 84 Over the Past 20 Years</h4>
+          <div class="authors">Kam, M.; Hodgson, J. A.; Park, J.; et al.</div>
+          <div class="journal">2024, ApJ, 970, 176</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...970..176K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2312.13666" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">65.</span>
+        <div class="pub-info">
+          <h4>First Sagittarius A* EHT Results. VIII. Physical Interpretation of the Polarized Ring</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2024, ApJL, 964, 26</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...964L..26E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">64.</span>
+        <div class="pub-info">
+          <h4>First Sagittarius A* EHT Results. VII. Polarization of the Ring</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2024, ApJL, 964, 25</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...964L..25E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">63.</span>
+        <div class="pub-info">
+          <h4>Ordered magnetic fields around the 3C 84 central black hole</h4>
+          <div class="authors">Paraschos, G. F.; Kim, J.-Y.; Wielgus, M.; EHT Collaboration; et al.</div>
+          <div class="journal">2024, A&A, 682, 3</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...682L...3P/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2402.00927" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">62.</span>
+        <div class="pub-info">
+          <h4>The persistent shadow of the supermassive black hole of M87. I. Observations, calibration, imaging, and analysis</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2024, A&A, 681, 79</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..79E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">61.</span>
+        <div class="pub-info">
+          <h4>A search for pulsars around Sgr A* in the first EHT dataset</h4>
+          <div class="authors">Torne, P.; Liu, K.; Eatough, R. P.; EHT Collaboration; et al.</div>
+          <div class="journal">2023, ApJ, in press</div>
+        </div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2308.15381" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">60.</span>
+        <div class="pub-info">
+          <h4>Polarimetric Geometric Modeling for mm-VLBI Observations of Black Holes</h4>
+          <div class="authors">Roelofs, F.; Johnson, M. D.; Chael, A.; EHT Collaboration; et al.</div>
+          <div class="journal">2023, ApJL, 957, 21</div>
+        </div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2311.10695" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">59.</span>
+        <div class="pub-info">
+          <h4>First M87 EHT Results. IX. Detection of Near-horizon Circular Polarization</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2023, ApJL, 957, 20</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...957L..20E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">58.</span>
+        <div class="pub-info">
+          <h4>The Greenland Telescope—Construction, Commissioning, and Operations in Pituffik</h4>
+          <div class="authors">Chen, M.-T.; Asada, K.; Matsushita, S.; …; Park, J.; et al.</div>
+          <div class="journal">2023, PASP, 135, 5001</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023PASP..135i5001C/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2307.10468" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">57.</span>
+        <div class="pub-info">
+          <h4>Precessing jet nozzle connecting to a spinning black hole in M87</h4>
+          <div class="authors">Cui, Y.; Hada, K.; Kawashima, T.; …; Park, J.; et al.</div>
+          <div class="journal">2023, Nature, 621, 711</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023Natur.621..711C/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2310.09015" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">56.</span>
+        <div class="pub-info">
+          <h4>Double SSA spectrum and magnetic field strength of the FSRQ 3C 454.3</h4>
+          <div class="authors">Jeong, H.-W.; Lee, S.-S.; Cheong, W. Y.; …; Park, J.; et al.</div>
+          <div class="journal">2023, MNRAS, 523, 5703</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.5703J/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2306.04888" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">55.</span>
+        <div class="pub-info">
+          <h4>Probing the Heart of Active Narrow-line Seyfert 1 Galaxies with VERA Wideband Polarimetry</h4>
+          <div class="authors">Takamura, M.; Hada, K.; Honma, M.; …; Park, J.; et al.</div>
+          <div class="journal">2023, ApJ, 952, 47</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...952...47T/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2306.03139" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">54.</span>
+        <div class="pub-info">
+          <h4>Comparison of Polarized Radiative Transfer Codes Used by the EHT Collaboration</h4>
+          <div class="authors">Prather, B. S.; Dexter, J.; Moscibrodzka, M.; EHT Collaboration; et al.</div>
+          <div class="journal">2023, ApJ, 950, 35</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950...35P/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2303.12004" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">53.</span>
+        <div class="pub-info">
+          <h4>Surveying Flux Density in Galaxies with Apparent Large Black Holes at mm/sub-mm Wavelengths</h4>
+          <div class="authors">Lo, W.-P.; Asada, K.; Matsushita, S.; Park, J.; et al.</div>
+          <div class="journal">2023, ApJ, 950, 10</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...950...10L/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">52.</span>
+        <div class="pub-info">
+          <h4>Spectral analysis of a parsec-scale jet in M87: Observational constraint on the magnetic field strengths in the jet</h4>
+          <div class="authors">Ro, H.; Kino, M.; Sohn, B. W.; …; Park, J.; et al.</div>
+          <div class="journal">2023, A&A, 673, 159</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023A%26A...673A.159R/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2303.01014" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">51.</span>
+        <div class="pub-info">
+          <h4>A ring-like accretion structure in M87 connecting its black hole and jet</h4>
+          <div class="authors">Lu, R.-S.; Asada, K.; Krichbaum, T. P.; Park, J.; et al.</div>
+          <div class="journal">2023, Nature, 616, 686</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023Natur.616..686L/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2304.13252" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">50.</span>
+        <div class="pub-info">
+          <h4>The Event Horizon Telescope Image of the Quasar NRAO 530</h4>
+          <div class="authors">Jorstad, S.; Wielgus, M.; Lico, R.; EHT Collaboration; et al.</div>
+          <div class="journal">2023, ApJ, 943, 170</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...943..170J/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2302.04622" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">49.</span>
+        <div class="pub-info">
+          <h4>Using the Crab Nebula as Polarization Angle Calibrator for the Korean VLBI Network</h4>
+          <div class="authors">Kam, M.; Trippe, S.; Byun, D.-Y.; Park, J.; et al.</div>
+          <div class="journal">2023, JKAS, 56, 1</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2023JKAS...56....1K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2212.08274" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">48.</span>
+        <div class="pub-info">
+          <h4>Overview of the Observing System and Initial Scientific Accomplishments of the EAVN</h4>
+          <div class="authors">Akiyama, K.; Algaba, J.-C.; An, T.; …; Park, J.; et al.</div>
+          <div class="journal">2022, Galaxies, 10, 113</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022Galax..10..113A/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2212.07040" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">47.</span>
+        <div class="pub-info">
+          <h4>Implications from the Velocity Profile of the M87 Jet: A Possibility of a Slowly Rotating Black Hole Magnetosphere</h4>
+          <div class="authors">Kino, M.; Takahashi, M.; Kawashima, T.; Park, J.; et al.</div>
+          <div class="journal">2022, ApJ, 939, 83</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...939...83K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2209.07264" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">46.</span>
+        <div class="pub-info">
+          <h4>The Photon Ring in M87*</h4>
+          <div class="authors">Broderick, A. E.; Pesce, D. W.; Gold, R.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 935, 61</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...935...61B/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2208.09004" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">45.</span>
+        <div class="pub-info">
+          <h4>Resolving the Inner Parsec of the Blazar J1924-2914 with the EHT</h4>
+          <div class="authors">Issaoun, S.; Wielgus, M.; Jorstad, S.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 934, 145</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...934..145I/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2208.01662" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">44.</span>
+        <div class="pub-info">
+          <h4>Unraveling the Innermost Jet Structure of OJ 287 with the First GMVA+ALMA Observations</h4>
+          <div class="authors">Zhao, G.-Y.; Gómez, J. L.; Fuentes, A.; …; Park, J.; et al.</div>
+          <div class="journal">2022, ApJ, 932, 72</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...932...72Z/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">43.</span>
+        <div class="pub-info">
+          <h4>Characterizing and Mitigating Intraday Variability: Reconstructing Source Structure in Accreting Black Holes with mm-VLBI</h4>
+          <div class="authors">Broderick, A. E.; Gold, R.; Georgiev, B.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 21</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..21B/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">42.</span>
+        <div class="pub-info">
+          <h4>A Universal Power-law Prescription for Variability from Synthetic Images of Black Hole Accretion Flows</h4>
+          <div class="authors">Georgiev, B.; Pesce, D. W.; Broderick, A. E.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 20</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..20G/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">41.</span>
+        <div class="pub-info">
+          <h4>Millimeter Light Curves of Sagittarius A* Observed during the 2017 EHT Campaign</h4>
+          <div class="authors">Wielgus, M.; Marchili, N.; Martí-Vidal, I.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 19</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..19W/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">40.</span>
+        <div class="pub-info">
+          <h4>Selective Dynamical Imaging of Interferometric Data</h4>
+          <div class="authors">Farah, J.; Galison, P.; Akiyama, K.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 18</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..18F/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">39.</span>
+        <div class="pub-info">
+          <h4>First Sagittarius A* EHT Results. VI. Testing the Black Hole Metric</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 17</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..17E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">38.</span>
+        <div class="pub-info">
+          <h4>First Sagittarius A* EHT Results. V. Testing Astrophysical Models of the Galactic Center Black Hole</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 16</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..16E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">37.</span>
+        <div class="pub-info">
+          <h4>First Sagittarius A* EHT Results. IV. Variability, Morphology, and Black Hole Mass</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 15</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..15E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">36.</span>
+        <div class="pub-info">
+          <h4>First Sagittarius A* EHT Results. III. Imaging of the Galactic Center Supermassive Black Hole</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 14</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..14E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">35.</span>
+        <div class="pub-info">
+          <h4>First Sagittarius A* EHT Results. II. EHT and Multiwavelength Observations, Data Processing, and Calibration</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 13</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..13E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">34.</span>
+        <div class="pub-info">
+          <h4>First Sagittarius A* EHT Results. I. The Shadow of the Supermassive Black Hole in the Center of the Milky Way</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2022, ApJ, 930, 12</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...930L..12E/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">33.</span>
+        <div class="pub-info">
+          <h4>The Intrinsic Structure of Sagittarius A* at 1.3 cm and 7 mm</h4>
+          <div class="authors">Cho, I.; Zhao, G.-Y.; Kawashima, T.; …; Park, J.; et al.</div>
+          <div class="journal">2022, ApJ, 926, 108</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021RAA....21..205C/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">32.</span>
+        <div class="pub-info">
+          <h4>East Asian VLBI Network observations of AGN jets: Imaging with KaVA+Tianma+Nanshan</h4>
+          <div class="authors">Cui, Y.-Z.; Hada, K.; Kino, M.; …; Park, J.; et al.</div>
+          <div class="journal">2021, RAA, 21, 205</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021RAA....21..205C/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2104.05525" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">31.</span>
+        <div class="pub-info">
+          <h4>Event Horizon Telescope observations of the jet launching and collimation in Centaurus A</h4>
+          <div class="authors">Janssen, M.; Falcke, H.; Kadler, M.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2021, Nature Astronomy, 5, 1017</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021NatAs.tmp..139J/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">30.</span>
+        <div class="pub-info">
+          <h4>A Detailed Kinematic Study of 3C 84 and Its Connection to Gamma-Rays</h4>
+          <div class="authors">Hodgson, J. A.; Rani, B.; Oh, J.; …; Park, J.; et al.</div>
+          <div class="journal">2021, ApJ, 914, 43</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...914...43H/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2104.03081" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">29.</span>
+        <div class="pub-info">
+          <h4>Interferometric Monitoring of Gamma-ray Bright AGNs: Measuring the Magnetic Field Strength of 4C +29.45</h4>
+          <div class="authors">Kang, S.; Lee, S.-S.; Hodgson, J.; …; Park, J.; et al.</div>
+          <div class="journal">2021, A&A, 651, A74</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021arXiv210502454K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2105.02454" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">28.</span>
+        <div class="pub-info">
+          <h4>Constraints on Black-hole Charges with the 2017 EHT Observations of M87*</h4>
+          <div class="authors">Kocherlakota, P.; Rezzolla, L.; Falcke, H.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2021, PhRvD, 103, 4047</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021PhRvD.103j4047K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2105.09343" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">27.</span>
+        <div class="pub-info">
+          <h4>The Polarized Image of a Synchrotron-emitting Ring of Gas Orbiting a Black Hole</h4>
+          <div class="authors">Narayan, R.; Palumbo, D. C. M.; Johnson, M. D.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2021, ApJ, 912, 35</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...912...35N/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2105.01804" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">26.</span>
+        <div class="pub-info">
+          <h4>East Asian VLBI Network Observations of AGN Jets: Imaging with KaVA+Tianma+Nanshan</h4>
+          <div class="authors">Cui, Y.; Hada, K.; Kino, M.; …; Park, J.; et al.</div>
+          <div class="journal">2021, RAA, 21, 205</div>
+        </div>
+        <div class="pub-links"><a href="http://www.raa-journal.org/raa/index.php/raa/article/view/4876" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2104.05525" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">25.</span>
+        <div class="pub-info">
+          <h4>Broadband Multi-wavelength Properties of M87 during the 2017 EHT Campaign</h4>
+          <div class="authors">EHT MWL Science Working Group; et al.</div>
+          <div class="journal">2021, ApJ, 911, 11</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...911L..11E/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2104.06855" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">24.</span>
+        <div class="pub-info">
+          <h4>Polarimetric Properties of Event Horizon Telescope Targets from ALMA</h4>
+          <div class="authors">Goddi, C.; Marti-Vidal, I.; Messias, H.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2021, ApJ, 910, 14</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...910L..14G/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2105.02272" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">23.</span>
+        <div class="pub-info">
+          <h4>First M87 EHT Results. VIII. Magnetic Field Structure near the Event Horizon</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2021, ApJ, 910, 13</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...910L..13E/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2105.01173" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">22.</span>
+        <div class="pub-info">
+          <h4>First M87 EHT Results. VII. Polarization of the Ring</h4>
+          <div class="authors">EHT Collaboration; et al.</div>
+          <div class="journal">2021, ApJ, 910, 12</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...910L..12E/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2105.01169" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">21.</span>
+        <div class="pub-info">
+          <h4>Gravitational Test beyond the First Post-Newtonian Order with the Shadow of the M87 Black Hole</h4>
+          <div class="authors">Psaltis, D.; Medeiros, L.; Christian, P.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2020, PhRvL, 125, 1104</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2020PhRvL.125n1104P/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2010.01055" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">20.</span>
+        <div class="pub-info">
+          <h4>Interferometric Monitoring of Gamma-Ray Bright AGNs: OJ 287</h4>
+          <div class="authors">Lee, J. W.; Lee, S.-S.; Algaba, J.-C.; …; Park, J.; et al.</div>
+          <div class="journal">2020, ApJ, 902, 104</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...902..104L/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2009.02084" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">19.</span>
+        <div class="pub-info">
+          <h4>Monitoring the Morphology of M87* in 2009-2017 with the EHT</h4>
+          <div class="authors">Wielgus, M.; Akiyama, K.; Blackburn, L.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2020, ApJ, 901, 67</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...901...67W/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2009.11842" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">18.</span>
+        <div class="pub-info">
+          <h4>Event Horizon Telescope imaging of the archetypal blazar 3C 279 at an extreme 20 microarcsecond resolution</h4>
+          <div class="authors">Kim, J.-Y.; Krichbaum, T. P.; Broderick, A. E.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2020, A&A, 640, 69</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2020A%26A...640A..69K/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">17.</span>
+        <div class="pub-info">
+          <h4>Verification of Radiative Transfer Schemes for the EHT</h4>
+          <div class="authors">Gold, R.; Broderick, A. E.; Younsi, Z.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2020, ApJ, 897, 148</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...897..148G/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">16.</span>
+        <div class="pub-info">
+          <h4>THEMIS: A Parameter Estimation Framework for the Event Horizon Telescope</h4>
+          <div class="authors">Broderick, A. E.; Gold, R.; Karami, M.; …; EHT Collaboration; et al.</div>
+          <div class="journal">2020, ApJ, 897, 139</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...897..139B/abstract" class="pub-link">ADS</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">15.</span>
+        <div class="pub-info">
+          <h4>Linear Polarization in the Nucleus of M87 at 7 mm and 1.3 cm</h4>
+          <div class="authors">Kravchenko, E.; Giroletti, M.; Hada, K.; Meier, D. L.; Nakamura, M.; Park, J.; Walker, R. C.</div>
+          <div class="journal">2020, A&A, 637, 6</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2020A%26A...637L...6K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/2006.07059" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">14.</span>
+        <div class="pub-info">
+          <h4>Exploring the Morphology and Origins of the 4C 38.41 Jet</h4>
+          <div class="authors">Algaba, J. C.; Rani, B.; Lee, S.-S.; Kino, M.; Park, J.; Kim, J.-Y.</div>
+          <div class="journal">2019, ApJ, 886, 85</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...886...85A/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1910.02661" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">13.</span>
+        <div class="pub-info">
+          <h4>Jet Kinematics of the Quasar 4C+21.35 from Observations with KaVA</h4>
+          <div class="authors">Lee, T.; Trippe, S.; Kino, M.; …; Park, J.; et al.</div>
+          <div class="journal">2019, MNRAS, 486, 2412</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.486.2412L/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1904.02894" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">12.</span>
+        <div class="pub-info">
+          <h4>Source-Frequency Phase-Referencing Observation of AGNs with KaVA</h4>
+          <div class="authors">Zhao, G.-Y.; Jung, T.; Sohn, B. W.; …; Park, J.; et al.</div>
+          <div class="journal">2019, JKAS, 52, 23</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2019JKAS...52...23Z/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1903.11796" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">11.</span>
+        <div class="pub-info">
+          <h4>Exploring the Nature of the 2016 gamma-ray Emission in the Blazar 1749+096</h4>
+          <div class="authors">Kim, D.; Trippe, S.; Lee, S.-S.; …; Park, J.; et al.</div>
+          <div class="journal">2018, MNRAS, 480, 2324</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.480.2324K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1807.07252" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">10.</span>
+        <div class="pub-info">
+          <h4>Exploring the Variability of the Flat-spectrum Radio Source 1633+382. II. Physical Properties</h4>
+          <div class="authors">Algaba, J.-C.; Lee, S.-S.; Rani, B.; …; Park, J.; et al.</div>
+          <div class="journal">2018, ApJ, 859, 128</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2018ApJ...859..128A/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1805.02849" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">9.</span>
+        <div class="pub-info">
+          <h4>KVN Observations Reveal Multiple gamma-ray Emission Regions in 3C 84?</h4>
+          <div class="authors">Hodgson, J. A.; Rani, B.; Lee, S.-S.; …; Park, J.; et al.</div>
+          <div class="journal">2018, MNRAS, 475, 368</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.475..368H/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1802.02763" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">8.</span>
+        <div class="pub-info">
+          <h4>Exploring the Variability of the Flat-spectrum Radio Source 1633+382. I. Phenomenology</h4>
+          <div class="authors">Algaba, J.-C.; Lee, S.-S.; Kim, D.; …; Park, J.; et al.</div>
+          <div class="journal">2018, ApJ, 852, 30</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2018ApJ...852...30A/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1711.10120" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">7.</span>
+        <div class="pub-info">
+          <h4>The Power of Simultaneous Multi-frequency Observations for mm-VLBI: Beyond Frequency Phase Transfer</h4>
+          <div class="authors">Zhao, G.-Y.; Algaba, J.-C.; Lee, S.-S.; …; Park, J.; et al.</div>
+          <div class="journal">2018, AJ, 155, 26</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2018AJ....155...26Z/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1712.06243" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">6.</span>
+        <div class="pub-info">
+          <h4>The Millimeter-Radio Emission of BL Lacertae during Two gamma-ray Outbursts</h4>
+          <div class="authors">Kim, D.; Trippe, S.; Lee, S.-S.; Park, J.; et al.</div>
+          <div class="journal">2017, JKAS, 50, 167</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2017JKAS...50..167K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1711.05952" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">5.</span>
+        <div class="pub-info">
+          <h4>Pilot KaVA monitoring on the M87 jet: Confirming the inner jet structure and superluminal motions</h4>
+          <div class="authors">Hada, K.; Park, J.; Kino, M.; et al.</div>
+          <div class="journal">2017, PASJ, 69, 71</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2017PASJ...69...71H/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1706.02066" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">4.</span>
+        <div class="pub-info">
+          <h4>Interferometric Monitoring of gamma-ray Bright AGNs. I. The Results of Single-epoch Multifrequency Observations</h4>
+          <div class="authors">Lee, S.-S.; Wajima, K.; Algaba, J.-C.; …; Park, J.; et al.</div>
+          <div class="journal">2016, ApJS, 227, 8</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2016ApJS..227....8L/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1610.09121" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">3.</span>
+        <div class="pub-info">
+          <h4>PAGaN II: The Evolution of AGN Jets on Sub-Parsec Scales</h4>
+          <div class="authors">Oh, J.; Trippe, S.; Kang, S.; …; Park, J.; et al.</div>
+          <div class="journal">2015, JKAS, 48, 299</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2015JKAS...48..299O/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1510.08153" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">2.</span>
+        <div class="pub-info">
+          <h4>PAGaN I: Multi-Frequency Polarimetry of AGN Jets with KVN</h4>
+          <div class="authors">Kim, J.; Trippe, S.; Sohn, B. W.; …; Park, J.; et al.</div>
+          <div class="journal">2015, JKAS, 48, 285</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2015JKAS...48..285K/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1510.08150" class="pub-link">arXiv</a></div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">1.</span>
+        <div class="pub-info">
+          <h4>Interferometric Monitoring of gamma-ray Bright AGN II: Frequency Phase Transfer</h4>
+          <div class="authors">Algaba, J.-C.; Zhao, G.-Y.; Lee, S.-S.; …; Park, J.; et al.</div>
+          <div class="journal">2015, JKAS, 48, 237</div>
+        </div>
+        <div class="pub-links"><a href="https://ui.adsabs.harvard.edu/abs/2015JKAS...48..237A/abstract" class="pub-link">ADS</a> <a href="https://arxiv.org/abs/1510.05817" class="pub-link">arXiv</a></div>
+      </div>
+    </div>
+
+    <div class="pub-cta" style="margin-top:2rem;">
+      <a href="https://ui.adsabs.harvard.edu/public-libraries/Ifwhke1sSZStMcVAe8B9gg" style="font-family:var(--font-mono);font-size:0.85rem;color:var(--accent);text-decoration:none;">📚 Full Publication List on ADS →</a>
+      <a href="http://orcid.org/0000-0001-6558-9053" style="font-family:var(--font-mono);font-size:0.85rem;color:var(--accent);text-decoration:none;">ORCID: 0000-0001-6558-9053 →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- SOFTWARE -->
+<section id="software" class="tab-content">
+  <div class="section-inner">
+    <div class="section-label">// Open Source</div>
+    <h2 class="section-title">Software</h2>
+    <p class="section-desc">Tools we develop and share with the community.</p>
+    <div class="software-section">
+      <div class="software-text">
+        <span class="code-tag">gpcal</span>
+        <h3>GPCAL</h3>
+        <p>
+          A novel instrumental polarization calibration pipeline for VLBI data. 
+          GPCAL overcomes limitations in existing calibration tools and has served 
+          as one of the main polarization calibration pipelines for the EHT — from the 
+          first polarized image of M87* (2021) to the multi-year variability study (2025).
+        </p>
+        <a href="https://github.com/jhparkastro/gpcal" class="btn-github">
+          ⬡ View on GitHub
+        </a>
+      </div>
+      <div class="software-visual">
+        <div style="max-width:400px;width:100%;">
+          <img src="http://jhparkastro.github.io/files/M87pol.png" alt="M87 linear polarization image produced by GPCAL" style="width:100%;border-radius:12px;border:1px solid var(--border);">
+          <p style="font-size:0.78rem;color:var(--text-dim);margin-top:0.75rem;line-height:1.55;">Linear polarization image of the M87 jet at 43 GHz from VLBA observations, calibrated using GPCAL. Tick marks indicate the electric vector position angle (EVPA), tracing the magnetic field structure. This result revealed a polarimetric structure in the subparsec core that was not detectable with existing calibration tools. (Park et al. 2021, ApJ, 922, 180)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TALKS -->
+<section id="talks" class="tab-content">
+  <div class="section-inner">
+    <div class="section-label">// Selected Talks</div>
+    <h2 class="section-title">Talks &amp; Presentations</h2>
+
+    <h3 style="font-size:1rem;color:var(--accent);margin:2rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">Press Conferences</h3>
+    <div class="pub-highlights">
+      <div class="talk-item pub-item"><span class="pub-year">Mar 2021</span><div class="pub-info"><h4>First M87 EHT Results: Polarization of the Ring &amp; Magnetic Field Structure near the Event Horizon</h4><div class="journal">ASIAA, Taipei, Taiwan — <a href="http://www.asiaa.sinica.edu.tw/news/shownews.php?i=c224900c36836fdf6ef50d6963df9c46" style="color:var(--accent)">website</a></div></div></div>
+    </div>
+
+    <h3 style="font-size:1rem;color:var(--accent);margin:2rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">Public Outreach Talks</h3>
+    <div class="pub-highlights">
+      <div class="talk-item pub-item"><span class="pub-year">Apr 2024</span><div class="pub-info"><h4>Seeing the Black Hole: EHT Black Hole Observation</h4><div class="journal">National Gwacheon Science Museum, Korea — <a href="https://www.sciencecenter.go.kr/scipia/introduce/notice/24475" style="color:var(--accent)">website</a></div></div></div>
+    </div>
+
+    <h3 style="font-size:1rem;color:var(--accent);margin:2rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">Schools &amp; Lectures</h3>
+    <div class="pub-highlights">
+      <div class="talk-item pub-item"><span class="pub-year">Aug 2025</span><div class="pub-info"><h4>Supermassive Black Holes &amp; Active Galactic Nuclei</h4><div class="journal">2025 Radio Summer School, KASI, Daejeon — <a href="https://radio.kasi.re.kr/event/event.php?id=radio25" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jan 2025</span><div class="pub-info"><h4>a Generalised Polarisation CALibration pipeline (GPCAL)</h4><div class="journal">M2FINDERS Workshop, MPIfR, Bonn, Germany — <a href="https://events.mpifr-bonn.mpg.de/indico/event/421/overview" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Aug 2024</span><div class="pub-info"><h4>Supermassive Black Holes &amp; Active Galactic Nuclei</h4><div class="journal">2024 Radio Summer School, KASI, Daejeon — <a href="https://radio.kasi.re.kr/event/event.php?id=radio24" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Aug 2023</span><div class="pub-info"><h4>Supermassive Black Holes &amp; Active Galactic Nuclei</h4><div class="journal">2023 Radio Summer School, SNU, Siheung — <a href="https://radio.kasi.re.kr/event/event.php?id=radiousers2023" style="color:var(--accent)">website</a></div></div></div>
+    </div>
+
+    <h3 style="font-size:1rem;color:var(--accent);margin:2rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">Invited Talks</h3>
+    <div class="pub-highlights">
+      <div class="talk-item pub-item"><span class="pub-year">Dec 2025</span><div class="pub-info"><h4>A Magnetic Helix at the Heart of M87: New Polarization Insights Challenging Jet Formation Theory</h4><div class="journal">11th East Asian Meeting on Astronomy, Niigata, Japan — <a href="https://naoj-global.mtk.nao.ac.jp/eama11/program" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Dec 2025</span><div class="pub-info"><h4>Unveiling the Shadow of a Giant: The M87 Black Hole and its Powerful Jet</h4><div class="journal">UNIST, Ulsan, Korea — <a href="https://physics.unist.ac.kr/seminar/unveiling-the-shadow-of-a-giant-the-m87-black-hole-and-its-powerful-jet/" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Sep 2025</span><div class="pub-info"><h4>Imaging the Supermassive Black Hole at the Heart of M87 Using Global mm-VLBI</h4><div class="journal">East Asian ALMA Science Workshop, Kagoshima, Japan — <a href="https://www2.nao.ac.jp/~eaarc/Meetings/EAALMA2025/" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Apr 2025</span><div class="pub-info"><h4>Imaging the Supermassive Black Hole at the Heart of M87 Using Global mm-VLBI</h4><div class="journal">ChungNam National University, Daejeon — <a href="https://astro.cnu.ac.kr/astro/colloquium/univ.do?mode=view&articleNo=544386&article.offset=0&articleLimit=10" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Feb 2025</span><div class="pub-info"><h4>Recent Advances in AGN Jet Studies Enabled by the Global VLBI Alliance</h4><div class="journal">JIVE &amp; ASTRON, Dwingeloo, Netherlands</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Feb 2025</span><div class="pub-info"><h4>Introduction to GPCAL: a Novel Pipeline for Instrumental Polarization Calibration</h4><div class="journal">JIVE &amp; ASTRON, Dwingeloo, Netherlands</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jan 2025</span><div class="pub-info"><h4>Recent Advances in AGN Jet Studies Enabled by the Global VLBI Alliance</h4><div class="journal">MPIfR, Bonn, Germany — <a href="https://colloquia.mpifr-bonn.mpg.de/?cid=3234" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Nov 2024</span><div class="pub-info"><h4>Imaging the Supermassive Black Hole at the Heart of M87 Using Global mm-VLBI</h4><div class="journal">73rd Workshop on Gravitational Waves and Numerical Relativity, POSTECH, Pohang — <a href="https://cdn.nr.re.kr/73rd_workshop_info/" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Oct 2024</span><div class="pub-info"><h4>Discovery of Limb-Brightening in the Parsec-Scale Jet of NGC 315</h4><div class="journal">15th East Asian VLBI Workshop, Port Dickson, Malaysia — <a href="https://sites.google.com/um.edu.my/eavw2024/schedule?authuser=0" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Oct 2024</span><div class="pub-info"><h4>Advancing Supermassive Black Hole Research with the EHT</h4><div class="journal">110th KAS Fall Meeting, Gangneung, Korea</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jun 2024</span><div class="pub-info"><h4>Introduction to GPCAL: Calibrating Frequency- and Time-dependent Polarization Leakages</h4><div class="journal">MPIfR, Online — <a href="https://colloquia.mpifr-bonn.mpg.de/index.php?time=30" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Nov 2023</span><div class="pub-info"><h4>Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA</h4><div class="journal">Yonsei University, Seoul — <a href="https://astro.yonsei.ac.kr/galaxy/galaxy01/seminar.do?mode=view&articleNo=177137&article.offset=0&articleLimit=10" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jun 2023</span><div class="pub-info"><h4>Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA</h4><div class="journal">Kyung Hee University, Yongin — <a href="https://space.khu.ac.kr/space/user/bbs/BMSR00040/view.do" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">May 2023</span><div class="pub-info"><h4>Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA</h4><div class="journal">KASI, Daejeon — <a href="https://www.kasi.re.kr/kor/post/eng_colloquium/29408" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Apr 2023</span><div class="pub-info"><h4>Observing the Supermassive Black Hole at the Center of M87 using EHT and GMVA+ALMA</h4><div class="journal">107th KAS Spring Meeting, JeonJu</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Mar 2023</span><div class="pub-info"><h4>The Supermassive Black Hole at the Center of M87 as Seen by the EHT</h4><div class="journal">AAS HEAD 20 Meeting, Waikoloa, Hawai'i</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Feb 2023</span><div class="pub-info"><h4>The Magnetic Field Structure in the Jet Acceleration and Collimation Zone of M87</h4><div class="journal">Black Hole Astrophysics with VLBI 2023, NAOJ, Tokyo — <a href="https://sites.google.com/view/blackholeastrophysicswithvlbi2/program?authuser=0" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Aug 2022</span><div class="pub-info"><h4>Collimation and Acceleration of AGN jets</h4><div class="journal">IAUGA 2022 Focus Meeting 1, BEXCO, Busan — <a href="http://ga2022-fm1.kasi.re.kr/?page_id=26" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">May 2021</span><div class="pub-info"><h4>Magnetic field structure near the event horizon of the M87 black hole</h4><div class="journal">Seoul National University, Seoul — <a href="http://astro2.snu.ac.kr/bbs/board.php?tbl=colloquium170&mode=VIEW&num=10" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jan 2021</span><div class="pub-info"><h4>Prospect of Polarization Observations of M87 with the EHT &amp; Jet Collimation in NGC 315</h4><div class="journal">ICRR, University of Tokyo — <a href="http://www.icrr.u-tokyo.ac.jp/hea/conference210118.html" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Dec 2020</span><div class="pub-info"><h4>Collimation and Acceleration of the M87 jet (and more)</h4><div class="journal">National Tsing-Hua University, Hsinchu, Taiwan — <a href="http://www.astr.nthu.edu.tw/p/404-1336-186092.php?Lang=en" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Apr 2019</span><div class="pub-info"><h4>Faraday Rotation in the Jet of M87 Inside the Bondi Radius</h4><div class="journal">EATING VLBI Workshop 2019, Bologna, Italy — <a href="https://sites.google.com/a/inaf.it/eating-vlbi-workshop-2019/program?authuser=0" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jan 2019</span><div class="pub-info"><h4>Faraday Rotation in the Jet of M87 Inside the Bondi Radius</h4><div class="journal">ASIAA, Taipei, Taiwan — <a href="http://www.asiaa.sinica.edu.tw/activity/colloquium.php?i=2019" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jan 2018</span><div class="pub-info"><h4>Substantial Outflows from Hot Accretion flows Confining the Relativistic Jet of M87</h4><div class="journal">Tohoku University, Sendai, Japan</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jan 2017</span><div class="pub-info"><h4>Probing the Velocity Field in the Inner Region of M87 Jets with KaVA</h4><div class="journal">NAOJ, Mitaka, Tokyo, Japan</div></div></div>
+    </div>
+
+    <h3 style="font-size:1rem;color:var(--accent);margin:2rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">Contributed Talks</h3>
+    <div class="pub-highlights">
+      <div class="talk-item pub-item"><span class="pub-year">Nov 2025</span><div class="pub-info"><h4>Helical Magnetic Field in the Acceleration-Collimation Zone of the M87 Jet</h4><div class="journal">16th East Asian VLBI Workshop, PyeongChang — <a href="https://kvn.kasi.re.kr/event/event.php?id=eavw25" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Oct 2025</span><div class="pub-info"><h4>Magnetic Helix in M87 Black Hole Jet Challenges Jet Formation Theory</h4><div class="journal">112th KAS Fall Meeting, Jeju</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Oct 2024</span><div class="pub-info"><h4>Discovery of Limb-Brightening in NGC 315 through the Global VLBI Alliance</h4><div class="journal">SKA-VLBI Workshop, KASI, Daejeon — <a href="https://ska.kasi.re.kr/meetings/2024jul-ska-korea" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jul 2024</span><div class="pub-info"><h4>Faraday Rotation Observed in AGN: Applications in the SKA Era</h4><div class="journal">2024 Summer SKA-Korea Workshop, Dongtan — <a href="https://ska.kasi.re.kr/meetings/2024jul-ska-korea" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Feb 2024</span><div class="pub-info"><h4>Advancements in AGN Jet Research: Insights from the Global VLBI Alliance</h4><div class="journal">40 Years Evolution of Radio Interferometry in Japan, Tokyo — <a href="https://sites.google.com/view/40y-radio-interferometry-japan/home" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Feb 2024</span><div class="pub-info"><h4>Observational Evidence to Support a Dense Ambient Medium Shaping the Jet in 3C 84</h4><div class="journal">Black Hole Astrophysics with VLBI 2024, Tokyo — <a href="https://sites.google.com/view/black-hole-astrophysics-with-v/program?authuser=0" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Nov 2023</span><div class="pub-info"><h4>Observational Evidence for a Dense Ambient Medium Shaping the Jet in 3C 84</h4><div class="journal">14th East Asian VLBI Workshop, Shanghai — <a href="https://eavw2023.casconf.cn/page/1666240927259299841" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Oct 2023</span><div class="pub-info"><h4>Observational Evidence for a Dense Ambient Medium Shaping the Jet in 3C 84</h4><div class="journal">108th KAS Fall Meeting, Jeju</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jun 2023</span><div class="pub-info"><h4>Searching for New Targets for the EHT &amp; Faraday Synthesis of the M87 Jet</h4><div class="journal">Extended KVN KSP Workshop, KASI, Daejeon</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Oct 2022</span><div class="pub-info"><h4>Collimation and Acceleration of AGN jets</h4><div class="journal">106th KAS Fall Meeting, Gyeongju</div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Sep 2022</span><div class="pub-info"><h4>Collimation and Acceleration of AGN jets</h4><div class="journal">2nd Malaysia VLBI Workshop, Kuala Lumpur — <a href="https://sites.google.com/view/2myvlbiworkshop/program?authuser=0" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Mar 2021</span><div class="pub-info"><h4>GPCAL: a new calibration pipeline for instrumental polarization in VLBI data</h4><div class="journal">13th East Asian VLBI Workshop, Chiang Mai, Thailand — <a href="https://indico.narit.or.th/event/152/page/267-program" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jan 2021</span><div class="pub-info"><h4>Kinematics of the M87 Jet in the Collimation Zone</h4><div class="journal">COSPAR 2021, Sydney, Australia — <a href="https://www.cospar-assembly.org/admin/session_cospar.php?session=905" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jan 2020</span><div class="pub-info"><h4>Acceleration and Collimation of the M87 Jet</h4><div class="journal">ASIAA, Taipei, Taiwan — <a href="http://www.asiaa.sinica.edu.tw/activity/colloquium.php?i=2020" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Sep 2019</span><div class="pub-info"><h4>A new strategy for polarization calibration of VLBI data</h4><div class="journal">12th East Asian VLBI Workshop, Mito, Japan — <a href="http://vlbi.sci.ibaraki.ac.jp/eavw19/program.html" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Oct 2018</span><div class="pub-info"><h4>Substantial Winds from the accreting supermassive black hole in M87</h4><div class="journal">14th European VLBI Network Symposium, Granada, Spain — <a href="http://evnsymp2018.iaa.es/content/program" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Sep 2018</span><div class="pub-info"><h4>Detection of a Moving Spine-Sheath Jet Structure in PKS 1510-089</h4><div class="journal">East Asian VLBI Workshop, PyeongChang — <a href="https://radio.kasi.re.kr/event/event_eavn.php?d=eavn2018&m=menu&p=program" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">May 2018</span><div class="pub-info"><h4>Substantial Winds from Hot Accretion flows Confining the Relativistic Jet of M87</h4><div class="journal">IAU Symposium 342, Noto, Sicily, Italy — <a href="http://www.ira.inaf.it/iaus342/?page_id=36" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Oct 2017</span><div class="pub-info"><h4>Revealing the Nature of Blazar Radio Cores through Multi-Frequency Polarization Observations with KVN</h4><div class="journal">EATING VLBI Workshop 2017, Jeju — <a href="https://agn.kasi.re.kr/eatingvlbi/index.html" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jun 2017</span><div class="pub-info"><h4>Revealing the Nature of Blazar Radio Cores with KVN</h4><div class="journal">Brandeis University, Boston, USA — <a href="https://www.slac.stanford.edu/~teddy/Brandeis/schedule.html" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Sep 2016</span><div class="pub-info"><h4>Probing the Velocity Field in M87 Jets with KaVA</h4><div class="journal">East-Asia AGN Workshop 2016, SNU, Seoul — <a href="http://astro1.snu.ac.kr/eaagn/schedule.html" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Jul 2015</span><div class="pub-info"><h4>PAGaN: Polarimetry with KVN</h4><div class="journal">8th East Asian VLBI Workshop, Sapporo, Japan — <a href="https://www.miz.nao.ac.jp/vera/en/content/cc/cc20150706/c11.html" style="color:var(--accent)">website</a></div></div></div>
+      <div class="talk-item pub-item"><span class="pub-year">Aug 2014</span><div class="pub-info"><h4>Radio Variability and Random Walk Noise Properties of Four Blazars</h4><div class="journal">12th APRIM, Daejeon</div></div></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-left">KHU <span>Black Hole Research Group</span></div>
+      <div class="footer-copy">
+        Dept. of Astronomy & Space Science · Kyung Hee University<br>
+        Room 534, College of Applied Science · 1732 Deogyeong-daero, Giheung-gu, Yongin-si, Gyeonggi-Do 17104
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/jhparkastro">GitHub</a>
+      <a href="http://orcid.org/0000-0001-6558-9053">ORCID</a>
+      <a href="https://space.khu.ac.kr/space/user/main/view.do">KHU Dept.</a>
+      <a href="https://eventhorizontelescope.org/">EHT</a>
+      <a href="mailto:jparkastro@khu.ac.kr">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Logo click - return to hero/home
+document.querySelector('.nav-logo').addEventListener('click', e => {
+  e.preventDefault();
+  document.getElementById('heroSection').style.display = '';
+  document.querySelectorAll('section.tab-content').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Tab navigation - click to show/hide sections
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const id = link.getAttribute('href').substring(1);
+    // Hide hero section
+    document.getElementById('heroSection').style.display = 'none';
+    // Hide all tab sections
+    document.querySelectorAll('section.tab-content').forEach(s => s.classList.remove('active'));
+    // Show selected
+    const target = document.getElementById(id);
+    if (target) target.classList.add('active');
+    // Update nav active state
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    link.classList.add('active');
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Close mobile menu
+    const navLinks = document.querySelector('.nav-links');
+    if (window.innerWidth <= 900) navLinks.style.display = 'none';
+  });
+});
+
+// Hero quick-nav buttons
+document.querySelectorAll('.hero-nav-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.getAttribute('data-tab');
+    document.getElementById('heroSection').style.display = 'none';
+    document.querySelectorAll('section.tab-content').forEach(s => s.classList.remove('active'));
+    const target = document.getElementById(id);
+    if (target) target.classList.add('active');
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// Fade-in on scroll
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.research-card, .team-card, .pub-item, .highlight-card, .pi-profile, .talk-item').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  fadeObserver.observe(el);
+});
+</script>
+
+</body>
+</html>
