@@ -949,7 +949,7 @@ section.tab-content.active + .divider-tab { display: block; }
         </p>
 
         <div class="pi-outreach">
-          <img src="http://jhparkastro.github.io/files/Gwacheon.jpg" alt="Prof. Park giving a public talk at Gwacheon Science Museum">
+          <img src="https://jhparkastro.github.io/files/Gwacheon.jpg" alt="Prof. Park giving a public talk at Gwacheon Science Museum">
           <p>
             Public outreach talk at the National Gwacheon Science Museum (April 2024) on 
             "Seeing the Black Hole: EHT Black Hole Observation," attended by approximately 250 people 
@@ -2027,7 +2027,7 @@ section.tab-content.active + .divider-tab { display: block; }
       </div>
       <div class="software-visual">
         <div style="max-width:400px;width:100%;">
-          <img src="http://jhparkastro.github.io/files/M87pol.png" alt="M87 linear polarization image produced by GPCAL" style="width:100%;border-radius:12px;border:1px solid var(--border);">
+          <img src="https://jhparkastro.github.io/files/M87pol.png" alt="M87 linear polarization image produced by GPCAL" style="width:100%;border-radius:12px;border:1px solid var(--border);">
           <p style="font-size:0.78rem;color:var(--text-dim);margin-top:0.75rem;line-height:1.55;">Linear polarization image of the M87 jet at 43 GHz from VLBA observations, calibrated using GPCAL. Tick marks indicate the electric vector position angle (EVPA), tracing the magnetic field structure. This result revealed a polarimetric structure in the subparsec core that was not detectable with existing calibration tools. (Park et al. 2021, ApJ, 922, 180)</p>
         </div>
       </div>
@@ -2188,10 +2188,10 @@ fetch('citations.json')
     console.log('Citations loaded:', updated);
     
     function applyCitations(sectionHeading, citationMap) {
-      // Flatten keys: "17c" -> "17", keep "17" as "17"
+      // Flatten keys: "17c" -> "17", "s1" -> "1", keep "17" as "17"
       const flatMap = {};
       for (const [k, v] of Object.entries(citationMap)) {
-        flatMap[k.replace('c', '')] = v;
+        flatMap[k.replace(/^s/, '').replace(/c$/, '')] = v;
       }
       
       const headings = document.querySelectorAll('h3');
