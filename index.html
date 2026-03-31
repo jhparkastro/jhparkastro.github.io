@@ -895,7 +895,7 @@ section.tab-content.active + .divider-tab { display: block; }
           </div>
           <div class="pi-contact-item">
             <span class="pi-contact-label">Email</span>
-            <a href="mailto:jparkastro@khu.ac.kr" style="color:var(--accent);text-decoration:none;">jparkastro@khu.ac.kr</a>
+            <a href="/cdn-cgi/l/email-protection#610b1100130a001215130e210a09144f00024f0a13" style="color:var(--accent);text-decoration:none;"><span class="__cf_email__" data-cfemail="5c362c3d2e373d2f282e331c373429723d3f72372e">[email&#160;protected]</span></a>
           </div>
           <div class="pi-links">
             <a href="https://github.com/jhparkastro" class="pub-link">GitHub</a>
@@ -1051,8 +1051,8 @@ section.tab-content.active + .divider-tab { display: block; }
         We are always looking for highly motivated students and researchers interested in 
         black hole physics, VLBI techniques, and AGN jets. Graduate student positions (M.S./Ph.D.) are available.
       </p>
-      <a href="mailto:jparkastro@khu.ac.kr" class="btn-contact">
-        jparkastro@khu.ac.kr →
+      <a href="/cdn-cgi/l/email-protection#ef859f8e9d848e9c9b9d80af84879ac18e8cc1849d" class="btn-contact">
+        <span class="__cf_email__" data-cfemail="a7cdd7c6d5ccc6d4d3d5c8e7cccfd289c6c489ccd5">[email&#160;protected]</span> →
       </a>
     </div>
   </div>
@@ -1275,8 +1275,30 @@ section.tab-content.active + .divider-tab { display: block; }
       </div>
     </div>
 
-    <h3 style="font-size:1rem;color:var(--accent);margin:2rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">Papers by Students (Corresponding Author)</h3>
+    <h3 style="font-size:1rem;color:var(--accent);margin:2rem 0 1rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;">Papers by Students and Postdocs (Corresponding Author)</h3>
     <div class="pub-highlights">
+      <div class="pub-item">
+        <span class="pub-year">3.</span>
+        <div class="pub-info">
+          <h4>Verification of the Polarimetric Capability of the East Asia VLBI Network</h4>
+          <div class="authors">Lee, Yunjeong; <strong>Park, Jongho</strong>; Byun, D.-Y.; Kam, M.; Hada, K.; et al.</div>
+          <div class="journal">2026, PASP, in press</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2603.25185" class="pub-link">arXiv</a>
+        </div>
+      </div>
+      <div class="pub-item">
+        <span class="pub-year">2.</span>
+        <div class="pub-info">
+          <h4>A Unified Origin of Faraday Rotation toward 3C 84: The Circumnuclear Ambient Medium within the Parsec-Scale Bondi Radius of NGC 1275</h4>
+          <div class="authors">Kam, Minchul; <strong>Park, Jongho</strong>; Kino, M.; Hada, K.; et al.</div>
+          <div class="journal">2026, in press</div>
+        </div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2603.16796" class="pub-link">arXiv</a>
+        </div>
+      </div>
       <div class="pub-item">
         <span class="pub-year">1.</span>
         <div class="pub-info">
@@ -2140,12 +2162,12 @@ section.tab-content.active + .divider-tab { display: block; }
       <a href="http://orcid.org/0000-0001-6558-9053">ORCID</a>
       <a href="https://space.khu.ac.kr/space/user/main/view.do">KHU Dept.</a>
       <a href="https://eventhorizontelescope.org/">EHT</a>
-      <a href="mailto:jparkastro@khu.ac.kr">Contact</a>
+      <a href="/cdn-cgi/l/email-protection#771d0716051c1604030518371c1f02591614591c05">Contact</a>
     </div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav scroll effect
 window.addEventListener('scroll', () => {
   document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
@@ -2234,7 +2256,7 @@ fetch('citations.json')
     }
     
     applyCitations('First Author Papers', data.first_author || {});
-    applyCitations('Papers by Students', data.student || {});
+    applyCitations('Papers by Students and Postdocs', data.student || {});
     applyCitations('Co-Author Papers', data.coauthor || {});
     
     if (updated) {
@@ -2269,19 +2291,4 @@ document.querySelectorAll('.hero-nav-btn').forEach(btn => {
 const fadeObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.research-card, .team-card, .pub-item, .highlight-card, .pi-profile, .talk-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  fadeObserver.observe(el);
-});
-</script>
-
-</body>
-</html>
+      entry.target.style.
