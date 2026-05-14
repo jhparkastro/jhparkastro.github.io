@@ -37,109 +37,220 @@ FIRST_AUTHOR = {
     "1":  "2012JKAS...45..147P",
 }
 
-STUDENT = {"s1": "2024A&A...688A..94Y", "s2": "2026arXiv260316796K", "s3": "2026arXiv260325185L"}
-
-COAUTHOR = {
-    "83": "2026ApJ..1000..231B", "82": "2026ApJ...999..169R", "81": "2026arXiv260113356G", "80": "2026A&A...706A..27S", "79": "2026A&A...705A..23G", "78": "2025A&A...704A..91E", "77": "2025A&A...699A.279D",
-    "76": "2025A&A...699A.265G", "75": "2025ApJ...986...49K",
-    "74": "2025A&A...695A.233R", "73": "2025A&A...694A.291K",
-    "72": "2025JKAS...58...17C", "71": "2025A&A...693A.265E",
-    "70": "2024A&A...692A.205B", "69": "2024A&A...692A.140A",
-    "68": "2024ApJ...973..100K", "67": "2024AJ....168..130R",
-    "66": "2024ApJ...970..176K", "65": "2024ApJ...964L..26E",
-    "64": "2024ApJ...964L..25E", "63": "2024A&A...682L...3P",
-    "62": "2024A&A...681A..79E", "61": "2023ApJ...959...14T",
-    "60": "2023ApJ...957L..21R", "59": "2023ApJ...957L..20E",
-    "58": "2023PASP..135i5001C", "57": "2023Natur.621..711C",
-    "56": "2023MNRAS.523.5703J", "55": "2023ApJ...952...47T",
-    "54": "2023ApJ...950...35P", "53": "2023ApJ...950...10L",
-    "52": "2023A&A...673A.159R", "51": "2023Natur.616..686L",
-    "50": "2023ApJ...943..170J", "49": "2023JKAS...56....1K",
-    "48": "2022Galax..10..113A", "47": "2022ApJ...939...83K",
-    "46": "2022ApJ...935...61B", "45": "2022ApJ...934..145I",
-    "44": "2022ApJ...932...72Z", "43": "2022ApJ...930L..21B",
-    "42": "2022ApJ...930L..20G", "41": "2022ApJ...930L..19W",
-    "40": "2022ApJ...930L..18F", "39": "2022ApJ...930L..17E",
-    "38": "2022ApJ...930L..16E", "37": "2022ApJ...930L..15E",
-    "36": "2022ApJ...930L..14E", "35": "2022ApJ...930L..13E",
-    "34": "2022ApJ...930L..12E", "33": "2022ApJ...926..108C",
-    "32": "2021RAA....21..205C", "31": "2021NatAs...5.1017J",
-    "30": "2021ApJ...914...43H", "29": "2021A&A...651A..74K",
-    "28": "2021PhRvD.103j4047K", "27": "2021ApJ...912...35N",
-    "26": "2021RAA....21..205C", "25": "2021ApJ...911L..11E",
-    "24": "2021ApJ...910L..14G", "23": "2021ApJ...910L..13E",
-    "22": "2021ApJ...910L..12E", "21": "2020PhRvL.125n1104P",
-    "20": "2020ApJ...902..104L", "19": "2020ApJ...901...67W",
-    "18": "2020A&A...640A..69K", "17c": "2020ApJ...897..148G",
-    "16c": "2020ApJ...897..139B", "15c": "2020A&A...637L...6K",
-    "14c": "2019ApJ...886...85A", "13c": "2019MNRAS.486.2412L",
-    "12c": "2019JKAS...52...23Z", "11c": "2018MNRAS.480.2324K",
-    "10c": "2018ApJ...859..128A", "9c": "2018MNRAS.475..368H",
-    "8c": "2018ApJ...852...30A", "7c": "2018AJ....155...26Z",
-    "6c": "2017JKAS...50..167K", "5c": "2017PASJ...69...71H",
-    "4c": "2016ApJS..227....8L", "3c": "2015JKAS...48..299O",
-    "2c": "2015JKAS...48..285K", "1c": "2015JKAS...48..237A",
+STUDENT = {
+    "s1": "2024A&A...688A..94Y",
+    "s2": "2026arXiv260316796K",
+    "s3": "2026arXiv260325185L",
 }
 
+COAUTHOR = {
+    "83": "2026ApJ..1000..231B",
+    "82": "2026ApJ...999..169R",
+    "81": "2026arXiv260113356G",
+    "80": "2026A&A...706A..27S",
+    "79": "2026A&A...705A..23G",
+    "78": "2025A&A...704A..91E",
+    "77": "2025A&A...699A.279D",
+    "76": "2025A&A...699A.265G",
+    "75": "2025ApJ...986...49K",
+    "74": "2025A&A...695A.233R",
+    "73": "2025A&A...694A.291K",
+    "72": "2025JKAS...58...17C",
+    "71": "2025A&A...693A.265E",
+    "70": "2024A&A...692A.205B",
+    "69": "2024A&A...692A.140A",
+    "68": "2024ApJ...973..100K",
+    "67": "2024AJ....168..130R",
+    "66": "2024ApJ...970..176K",
+    "65": "2024ApJ...964L..26E",
+    "64": "2024ApJ...964L..25E",
+    "63": "2024A&A...682L...3P",
+    "62": "2024A&A...681A..79E",
+    "61": "2023ApJ...959...14T",
+    "60": "2023ApJ...957L..21R",
+    "59": "2023ApJ...957L..20E",
+    "58": "2023PASP..135i5001C",
+    "57": "2023Natur.621..711C",
+    "56": "2023MNRAS.523.5703J",
+    "55": "2023ApJ...952...47T",
+    "54": "2023ApJ...950...35P",
+    "53": "2023ApJ...950...10L",
+    "52": "2023A&A...673A.159R",
+    "51": "2023Natur.616..686L",
+    "50": "2023ApJ...943..170J",
+    "49": "2023JKAS...56....1K",
+    "48": "2022Galax..10..113A",
+    "47": "2022ApJ...939...83K",
+    "46": "2022ApJ...935...61B",
+    "45": "2022ApJ...934..145I",
+    "44": "2022ApJ...932...72Z",
+    "43": "2022ApJ...930L..21B",
+    "42": "2022ApJ...930L..20G",
+    "41": "2022ApJ...930L..19W",
+    "40": "2022ApJ...930L..18F",
+    "39": "2022ApJ...930L..17E",
+    "38": "2022ApJ...930L..16E",
+    "37": "2022ApJ...930L..15E",
+    "36": "2022ApJ...930L..14E",
+    "35": "2022ApJ...930L..13E",
+    "34": "2022ApJ...930L..12E",
+    "33": "2022ApJ...926..108C",
+    "32": "2021RAA....21..205C",
+    "31": "2021NatAs...5.1017J",
+    "30": "2021ApJ...914...43H",
+    "29": "2021A&A...651A..74K",
+    "28": "2021PhRvD.103j4047K",
+    "27": "2021ApJ...912...35N",
+    "26": "2021RAA....21..205C",
+    "25": "2021ApJ...911L..11E",
+    "24": "2021ApJ...910L..14G",
+    "23": "2021ApJ...910L..13E",
+    "22": "2021ApJ...910L..12E",
+    "21": "2020PhRvL.125n1104P",
+    "20": "2020ApJ...902..104L",
+    "19": "2020ApJ...901...67W",
+    "18": "2020A&A...640A..69K",
+    "17c": "2020ApJ...897..148G",
+    "16c": "2020ApJ...897..139B",
+    "15c": "2020A&A...637L...6K",
+    "14c": "2019ApJ...886...85A",
+    "13c": "2019MNRAS.486.2412L",
+    "12c": "2019JKAS...52...23Z",
+    "11c": "2018MNRAS.480.2324K",
+    "10c": "2018ApJ...859..128A",
+    "9c": "2018MNRAS.475..368H",
+    "8c": "2018ApJ...852...30A",
+    "7c": "2018AJ....155...26Z",
+    "6c": "2017JKAS...50..167K",
+    "5c": "2017PASJ...69...71H",
+    "4c": "2016ApJS..227....8L",
+    "3c": "2015JKAS...48..299O",
+    "2c": "2015JKAS...48..285K",
+    "1c": "2015JKAS...48..237A",
+}
+
+
+def fetch_with_retry(url, headers, params, max_retries=3):
+    """Fetch with exponential backoff retry."""
+    for attempt in range(max_retries):
+        try:
+            resp = requests.get(url, headers=headers, params=params)
+            if resp.status_code == 429:
+                wait = 10 * (attempt + 1)
+                print(f"    Rate limited, waiting {wait}s...")
+                time.sleep(wait)
+                continue
+            resp.raise_for_status()
+            return resp.json()
+        except requests.exceptions.HTTPError as e:
+            if attempt < max_retries - 1:
+                wait = 10 * (attempt + 1)
+                print(f"    Error {e}, retrying in {wait}s...")
+                time.sleep(wait)
+            else:
+                raise
+    return None
+
+
 def fetch_citations(bibcodes_dict, label=""):
+    """Fetch citation counts using individual bibcode queries."""
     results = {}
     bibcodes = list(set(bibcodes_dict.values()))
-    
-    for i in range(0, len(bibcodes), 20):
-        batch = bibcodes[i:i+20]
+
+    # Smaller batches (10 instead of 20) with longer delays
+    batch_size = 10
+    for i in range(0, len(bibcodes), batch_size):
+        batch = bibcodes[i:i+batch_size]
         query = " OR ".join([f'bibcode:"{b}"' for b in batch])
-        
+
         try:
-            resp = requests.get(
+            data = fetch_with_retry(
                 "https://api.adsabs.harvard.edu/v1/search/query",
-                headers=HEADERS,
-                params={"q": query, "fl": "bibcode,citation_count", "rows": len(batch)}
+                HEADERS,
+                {"q": query, "fl": "bibcode,citation_count", "rows": len(batch)}
             )
-            resp.raise_for_status()
-            data = resp.json()
-            
+
+            if data is None:
+                print(f"  [{label}] Batch {i//batch_size+1}: failed after retries")
+                continue
+
             bib_to_cite = {}
             for doc in data.get("response", {}).get("docs", []):
                 bib_to_cite[doc["bibcode"]] = doc.get("citation_count", 0)
-            
+
             for pid, bib in bibcodes_dict.items():
                 if bib in bib_to_cite and pid not in results:
                     results[pid] = bib_to_cite[bib]
-            
-            print(f"  [{label}] Batch {i//20+1}: queried {len(batch)}, got {len(bib_to_cite)}")
-            
+
+            print(f"  [{label}] Batch {i//batch_size+1}: queried {len(batch)}, got {len(bib_to_cite)}")
+
         except Exception as e:
-            print(f"  [{label}] Error batch {i//20+1}: {e}")
-        
-        time.sleep(0.3)
-    
+            print(f"  [{label}] Error batch {i//batch_size+1}: {e}")
+
+        # Wait 3 seconds between batches to avoid rate limiting
+        time.sleep(3)
+
     return results
+
 
 def main():
     print("Fetching first-author citations...")
     first = fetch_citations(FIRST_AUTHOR, "1st")
-    print(f"  => {len(first)}/{len(FIRST_AUTHOR)} papers\n")
-    
+    print(f"  => {len(first)}/{len(FIRST_AUTHOR)} papers")
+    print()
+
     print("Fetching student citations...")
     student = fetch_citations(STUDENT, "stu")
-    print(f"  => {len(student)}/{len(STUDENT)} papers\n")
-    
+    print(f"  => {len(student)}/{len(STUDENT)} papers")
+    print()
+
     print("Fetching co-author citations...")
     coauth = fetch_citations(COAUTHOR, "co")
-    print(f"  => {len(coauth)}/{len(COAUTHOR)} papers\n")
-    
-    output = {
-        "first_author": first,
-        "student": student,
-        "coauthor": coauth,
-        "updated": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
-    }
-    
+    print(f"  => {len(coauth)}/{len(COAUTHOR)} papers")
+    print()
+
+    total_found = len(first) + len(student) + len(coauth)
+    total_expected = len(FIRST_AUTHOR) + len(STUDENT) + len(COAUTHOR)
+
+    # SAFETY: if we got less than 50% of papers, merge with existing data
+    if total_found < total_expected * 0.5:
+        pct = 100 * total_found / total_expected
+        print(f"WARNING: Only got {total_found}/{total_expected} papers ({pct:.0f}%)")
+        print("Likely rate-limited. Merging with existing citations.json.")
+
+        try:
+            with open("citations.json") as f:
+                existing = json.load(f)
+
+            merged_first = {**existing.get("first_author", {}), **first}
+            merged_student = {**existing.get("student", {}), **student}
+            merged_coauth = {**existing.get("coauthor", {}), **coauth}
+
+            output = {
+                "first_author": merged_first,
+                "student": merged_student,
+                "coauthor": merged_coauth,
+                "updated": existing.get("updated", "") + " (partial update " + datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC") + ")"
+            }
+            print("Merged with existing data.")
+        except Exception as e:
+            print(f"Could not load existing citations.json: {e}")
+            print("Exiting without writing to avoid data loss.")
+            sys.exit(1)
+    else:
+        output = {
+            "first_author": first,
+            "student": student,
+            "coauthor": coauth,
+            "updated": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+        }
+
     with open("citations.json", "w") as f:
         json.dump(output, f, indent=2)
-    
-    total = sum(first.values()) + sum(student.values()) + sum(coauth.values())
+
+    total = sum(output["first_author"].values()) + sum(output["student"].values()) + sum(output["coauthor"].values())
     print(f"Done! Total citations: {total}")
+
 
 if __name__ == "__main__":
     main()
