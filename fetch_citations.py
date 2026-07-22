@@ -130,126 +130,120 @@ COAUTHOR = {
 }
 
 
-def fetch_with_retry(url, headers, params, max_retries=3):
-    """Fetch with exponential backoff retry."""
-    for attempt in range(max_retries):
-        try:
-            resp = requests.get(url, headers=headers, params=params)
-            if resp.status_code == 429:
-                wait = 10 * (attempt + 1)
-                print(f"    Rate limited, waiting {wait}s...")
-                time.sleep(wait)
-                continue
-            resp.raise_for_status()
-            return resp.json()
-        except requests.exceptions.HTTPError as e:
-            if attempt < max_retries - 1:
-                wait = 10 * (attempt + 1)
-                print(f"    Error {e}, retrying in {wait}s...")
-                time.sleep(wait)
-            else:
-                raise
-    return None
+def log_quota(resp, label):
+    """Print ADS rate-limit headers so we can see the token's remaining quota."""
+    lim = resp.headers.get("X-RateLimit-Limit")
+    rem = resp.headers.get("X-RateLimit-Remaining")
+    rst = resp.headers.get("X-RateLimit-Reset")
+    if lim or rem:
+        when = ""
+        if rst:
+            try:
+                when = " resets " + datetime.utcfromtimestamp(int(rst)).strftime("%Y-%m-%d %H:%M UTC")
+            except Exception:
+                when = f" reset={rst}"
+        print(f"    [{label}] HTTP {resp.status_code} | quota {rem}/{lim}{when}")
+    else:
+        print(f"    [{label}] HTTP {resp.status_code} | no rate-limit headers returned")
 
 
-def fetch_citations(bibcodes_dict, label=""):
-    """Fetch citation counts using individual bibcode queries."""
-    results = {}
-    bibcodes = list(set(bibcodes_dict.values()))
+def fetch_bigquery(all_bibcodes):
+    """Fetch every citation count in ONE request via the ADS bigquery endpoint."""
+    payload = "bibcode\n" + "\n".join(all_bibcodes)
+    resp = requests.post(
+        "https://api.adsabs.harvard.edu/v1/search/bigquery",
+        headers={**HEADERS, "Content-Type": "big-query/csv"},
+        params={"q": "*:*", "fl": "bibcode,citation_count", "rows": len(all_bibcodes)},
+        data=payload.encode("utf-8"),
+        timeout=60,
+    )
+    log_quota(resp, "bigquery")
+    resp.raise_for_status()
+    docs = resp.json().get("response", {}).get("docs", [])
+    return {d["bibcode"]: d.get("citation_count", 0) for d in docs}
 
-    # Smaller batches (10 instead of 20) with longer delays
-    batch_size = 10
-    for i in range(0, len(bibcodes), batch_size):
-        batch = bibcodes[i:i+batch_size]
-        query = " OR ".join([f'bibcode:"{b}"' for b in batch])
 
-        try:
-            data = fetch_with_retry(
-                "https://api.adsabs.harvard.edu/v1/search/query",
-                HEADERS,
-                {"q": query, "fl": "bibcode,citation_count", "rows": len(batch)}
-            )
-
-            if data is None:
-                print(f"  [{label}] Batch {i//batch_size+1}: failed after retries")
-                continue
-
-            bib_to_cite = {}
-            for doc in data.get("response", {}).get("docs", []):
-                bib_to_cite[doc["bibcode"]] = doc.get("citation_count", 0)
-
-            for pid, bib in bibcodes_dict.items():
-                if bib in bib_to_cite and pid not in results:
-                    results[pid] = bib_to_cite[bib]
-
-            print(f"  [{label}] Batch {i//batch_size+1}: queried {len(batch)}, got {len(bib_to_cite)}")
-
-        except Exception as e:
-            print(f"  [{label}] Error batch {i//batch_size+1}: {e}")
-
-        # Wait 3 seconds between batches to avoid rate limiting
+def fetch_chunked(all_bibcodes):
+    """Fallback: chunked GET queries with backoff."""
+    found = {}
+    size = 20
+    for i in range(0, len(all_bibcodes), size):
+        batch = all_bibcodes[i:i + size]
+        query = " OR ".join(f'bibcode:"{b}"' for b in batch)
+        for attempt in range(4):
+            try:
+                resp = requests.get(
+                    "https://api.adsabs.harvard.edu/v1/search/query",
+                    headers=HEADERS,
+                    params={"q": query, "fl": "bibcode,citation_count", "rows": len(batch)},
+                    timeout=60,
+                )
+                log_quota(resp, f"chunk {i//size+1}")
+                if resp.status_code == 429:
+                    wait = 15 * (attempt + 1)
+                    print(f"    rate limited, waiting {wait}s")
+                    time.sleep(wait)
+                    continue
+                resp.raise_for_status()
+                for d in resp.json().get("response", {}).get("docs", []):
+                    found[d["bibcode"]] = d.get("citation_count", 0)
+                break
+            except Exception as e:
+                print(f"    chunk error: {e}")
+                time.sleep(10)
         time.sleep(3)
-
-    return results
+    return found
 
 
 def main():
-    print("Fetching first-author citations...")
-    first = fetch_citations(FIRST_AUTHOR, "1st")
-    print(f"  => {len(first)}/{len(FIRST_AUTHOR)} papers")
-    print()
+    all_dicts = {"first_author": FIRST_AUTHOR, "student": STUDENT, "coauthor": COAUTHOR}
+    all_bibcodes = sorted({b for d in all_dicts.values() for b in d.values()})
+    print(f"Total unique bibcodes: {len(all_bibcodes)}")
 
-    print("Fetching student citations...")
-    student = fetch_citations(STUDENT, "stu")
-    print(f"  => {len(student)}/{len(STUDENT)} papers")
-    print()
+    bib_to_cite = {}
+    try:
+        print("Trying bigquery (single request)...")
+        bib_to_cite = fetch_bigquery(all_bibcodes)
+        print(f"  bigquery returned {len(bib_to_cite)} records")
+    except Exception as e:
+        print(f"  bigquery failed: {e}")
 
-    print("Fetching co-author citations...")
-    coauth = fetch_citations(COAUTHOR, "co")
-    print(f"  => {len(coauth)}/{len(COAUTHOR)} papers")
-    print()
+    if len(bib_to_cite) < len(all_bibcodes) * 0.5:
+        print("Falling back to chunked queries...")
+        bib_to_cite.update(fetch_chunked(all_bibcodes))
+        print(f"  after fallback: {len(bib_to_cite)} records")
 
-    total_found = len(first) + len(student) + len(coauth)
-    total_expected = len(FIRST_AUTHOR) + len(STUDENT) + len(COAUTHOR)
+    result = {}
+    for section, mapping in all_dicts.items():
+        result[section] = {
+            pid: bib_to_cite[bib] for pid, bib in mapping.items() if bib in bib_to_cite
+        }
+        print(f"  {section}: {len(result[section])}/{len(mapping)}")
 
-    # SAFETY: if we got less than 50% of papers, merge with existing data
-    if total_found < total_expected * 0.5:
-        pct = 100 * total_found / total_expected
-        print(f"WARNING: Only got {total_found}/{total_expected} papers ({pct:.0f}%)")
-        print("Likely rate-limited. Merging with existing citations.json.")
+    found = sum(len(v) for v in result.values())
+    expected = sum(len(v) for v in all_dicts.values())
+    stamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
+    if found < expected * 0.5:
+        print(f"::warning::Only {found}/{expected} papers fetched - ADS likely rate limited.")
         try:
             with open("citations.json") as f:
-                existing = json.load(f)
-
-            merged_first = {**existing.get("first_author", {}), **first}
-            merged_student = {**existing.get("student", {}), **student}
-            merged_coauth = {**existing.get("coauthor", {}), **coauth}
-
-            output = {
-                "first_author": merged_first,
-                "student": merged_student,
-                "coauthor": merged_coauth,
-                "updated": existing.get("updated", "") + " (partial update " + datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC") + ")"
-            }
-            print("Merged with existing data.")
+                old = json.load(f)
         except Exception as e:
-            print(f"Could not load existing citations.json: {e}")
-            print("Exiting without writing to avoid data loss.")
+            print(f"No usable citations.json to preserve ({e}); aborting without write.")
             sys.exit(1)
+        for section in all_dicts:
+            result[section] = {**old.get(section, {}), **result[section]}
+        output = {**result, "updated": old.get("updated", stamp).split(" (")[0],
+                  "last_attempt": stamp, "status": "stale"}
     else:
-        output = {
-            "first_author": first,
-            "student": student,
-            "coauthor": coauth,
-            "updated": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
-        }
+        output = {**result, "updated": stamp, "status": "ok"}
 
     with open("citations.json", "w") as f:
         json.dump(output, f, indent=2)
 
-    total = sum(output["first_author"].values()) + sum(output["student"].values()) + sum(output["coauthor"].values())
-    print(f"Done! Total citations: {total}")
+    total = sum(sum(v.values()) for v in result.values())
+    print(f"Done! status={output['status']} total citations={total}")
 
 
 if __name__ == "__main__":
