@@ -2267,7 +2267,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Load citation counts from citations.json
-fetch('citations.json')
+fetch('citations.json?v=' + Date.now())
   .then(r => {
     if (!r.ok) throw new Error('HTTP ' + r.status);
     return r.json();
