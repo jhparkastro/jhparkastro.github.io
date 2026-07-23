@@ -107,5 +107,6 @@
     "1c": 35
   },
   "updated": "2026-07-22 15:15 UTC",
-  "status": "ok"
+  "last_attempt": "2026-07-23 08:28 UTC",
+  "status": "stale"
 }
