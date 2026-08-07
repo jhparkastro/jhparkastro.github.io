@@ -1,34 +1,87 @@
 name: Update Citations
 
-on:
+'on':
   schedule:
-    # Run daily at 06:00 UTC (15:00 KST)
+    # Daily at 06:00 UTC (15:00 KST)
     - cron: '0 6 * * *'
-  workflow_dispatch:  # Allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-citations-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   update-citations:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
-          python-version: '3.11'
+          python-version: '3.13'
+          cache: pip
 
       - name: Install dependencies
-        run: pip install requests
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+
+      - name: Run regression tests
+        run: |
+          python -m unittest discover -s tests -v
+          node --check site-scripts.extracted.js
 
       - name: Fetch citation counts from ADS
+        id: fetch
+        continue-on-error: true
         env:
           ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
         run: python fetch_citations.py
 
-      - name: Commit and push if changed
+      - name: Commit and push citation data if changed
+        if: ${{ always() }}
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
+          set -euo pipefail
+
+          if [[ ! -f citations.json ]]; then
+            echo "citations.json was not produced; nothing to commit."
+            exit 0
+          fi
+
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add citations.json
-          git diff --cached --quiet || (git commit -m "Update citation counts [$(date -u +%Y-%m-%d)]" && git push)
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- citations.json
+
+          if git diff --cached --quiet; then
+            echo "Citation data is unchanged."
+            exit 0
+          fi
+
+          git commit -m "Update citation counts [$(date -u +%F)]"
+
+          for attempt in 1 2 3; do
+            if git pull --rebase origin "$BRANCH" && git push origin "HEAD:$BRANCH"; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            echo "Push attempt ${attempt} failed; retrying after synchronizing."
+            sleep $((attempt * 3))
+          done
+
+          echo "Unable to push citation update after three attempts." >&2
+          exit 1
+
+      - name: Mark degraded citation refresh as failed
+        if: ${{ always() && steps.fetch.outcome == 'failure' }}
+        run: |
+          echo "The script preserved last-known citation data, but this refresh was incomplete or failed."
+          exit 1
